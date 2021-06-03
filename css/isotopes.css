@@ -1,0 +1,255 @@
+/*
+*
+* Isotope
+*/
+@keyframes sprite-animation {
+	from {
+		background-position: 0 0;
+	}
+}
+
+[data-isotope-layout] {
+	z-index: 0;
+	display: block;
+	overflow: hidden;
+	min-height: 160px;
+	margin-left: -15px;
+	margin-right: -15px;
+	transition: .4s all ease;
+}
+
+[data-isotope-layout]:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 64px;
+	height: 64px;
+	margin-top: 15px;
+	background-image: url("../images/isotope-loader.png");
+	background-position: -1152px 0;
+	animation: 0.7s sprite-animation steps(18) infinite;
+	transition: .4s all ease;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+[data-isotope-layout] [class*="col-"] {
+	display: block;
+	opacity: 0;
+	will-change: transform;
+	backface-visibility: hidden;
+	transition: .1s opacity ease-in;
+}
+
+[data-isotope-layout].isotope--loaded [class*="col-"] {
+	opacity: 1;
+}
+
+[data-isotope-layout].isotope--loaded:after {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.isotope.isotope-condensed {
+	margin-left: 0;
+	margin-right: 0;
+	overflow: hidden;
+}
+
+.isotope.isotope-condensed [class*='col'] {
+	padding: 0;
+	margin: 0 0 30px 0;
+}
+
+@media (min-width: 576px) {
+	.isotope.isotope-condensed [class*='col'] {
+		margin: 0 -1px -1px 0;
+	}
+}
+
+.isotope-filters-list {
+	position: relative;
+	font-size: 16px;
+	margin-left: -20px;
+	margin-bottom: -10px;
+}
+
+.isotope-filters-list > * {
+	margin-left: 20px;
+}
+
+.isotope-filters-list::after {
+	content: '';
+	position: absolute;
+	left: 20px;
+	right: 0;
+	bottom: 10px;
+	border-bottom: 1px solid #e8e9ee;
+}
+
+.isotope-filters-list li {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.isotope-filters-list a {
+	position: relative;
+	display: block;
+	z-index: 1;
+	padding-bottom: 10px;
+	color: #888888;
+}
+
+.isotope-filters-list a::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 1px;
+	transition: .4s;
+	background: #C1AD96;
+}
+
+.isotope-filters-list a:hover {
+	color: #1C2647;
+}
+
+.isotope-filters-list a.active {
+	color: #1C2647;
+}
+
+.isotope-filters-list a.active::after {
+	right: auto;
+	left: 0;
+	width: 100%;
+}
+
+@media (min-width: 992px) {
+	.isotope-filters-list {
+		font-size: 18px;
+		margin-left: -48px;
+	}
+	.isotope-filters-list > * {
+		margin-left: 48px;
+	}
+	.isotope-filters-list::after {
+		left: 45px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.isotope-filters-list {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.isotope-responsive {
+		margin-left: -7px;
+		margin-right: -7px;
+		margin-bottom: -14px;
+	}
+	.isotope-responsive:empty {
+		margin-bottom: 0;
+	}
+	.isotope-responsive > * {
+		margin-bottom: 14px;
+	}
+	.isotope-responsive [class*='col'] {
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+}
+
+@media (min-width: 768px) {
+	.isotope-responsive {
+		margin-bottom: -30px;
+	}
+	.isotope-responsive:empty {
+		margin-bottom: 0;
+	}
+	.isotope-responsive > * {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.isotope-filters-modern {
+		position: relative;
+		z-index: 10;
+	}
+	.isotope-filters-toggle {
+		display: block;
+		padding: 10px 20px;
+		color: #fff;
+		background: #C1AD96;
+		box-shadow: none;
+		border: 0;
+		margin: 0 auto;
+	}
+	.isotope-filters-toggle .caret {
+		position: relative;
+		display: inline-block;
+		margin-left: 5px;
+		font-family: "FontAwesome";
+		font-size: 14px;
+		transition: .22s;
+		will-change: transform;
+	}
+	.isotope-filters-toggle .caret::before {
+		content: '\f107';
+	}
+	.isotope-filters-toggle.active .caret {
+		transform: scale(1, -1);
+	}
+	.isotope-filters-list {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 10;
+		min-width: 240px;
+		margin: 5px 0 0 0;
+		padding: 20px;
+		border: 1px solid #e8e9ee;
+		opacity: 0;
+		visibility: hidden;
+		background: #fff;
+		transition: .3s ease-in;
+	}
+	.isotope-filters-list::after {
+		display: none;
+	}
+	.isotope-filters-list.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	.isotope-filters-list li {
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+	.isotope-filters-list a {
+		padding: 0;
+	}
+	.isotope-filters-list a::after {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.isotope-filters-modern .isotope-filters-toggle {
+		display: none;
+	}
+}
+
+* + .isotope {
+	margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+	* + .isotope {
+		margin-top: 47px;
+	}
+}

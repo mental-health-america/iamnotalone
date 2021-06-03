@@ -117,7 +117,7 @@ class CallbackEvent extends Event
     {
         if (! isset($this->description)) {
             throw new LogicException(
-                "A scheduled event name is required to prevent overlapping. Use the 'name' method before 'withoutOverlapping'."
+                "A scheduled activity name is required to prevent overlapping. Use the 'name' method before 'withoutOverlapping'."
             );
         }
 
@@ -141,7 +141,7 @@ class CallbackEvent extends Event
     {
         if (! isset($this->description)) {
             throw new LogicException(
-                "A scheduled event name is required to only run on one server. Use the 'name' method before 'onOneServer'."
+                "A scheduled activity name is required to only run on one server. Use the 'name' method before 'onOneServer'."
             );
         }
 

@@ -39,14 +39,14 @@
                             </div>
 
                             <div class="py-2 text-left">
-                                <label for="event_name" class="uppercase block text-xs mb-2">Event Banner (png, jpg, webp; max:200kb)</label>
+                                <label for="event_name" class="uppercase block text-xs mb-2">Event Banner (PNG, JPG; 750 * 250 px)</label>
                                 <input type="file" class="border text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700" required accept="image/*" name="banner" placeholder="Upload Image" value="<?php echo e(old('banner')); ?>"/>
                             </div>
                         </div>
 
                         <div class="py-2 text-left">
-                            <label for="event_name" class="uppercase block text-xs mb-2">Event Description</label>
-                            <textarea cols="30" rows="3" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-8 rounded-lg focus:border-gray-700" placeholder="Event Description" name="description" required><?php echo e(old('description')); ?></textarea>
+                            <label for="event_name" class="uppercase block text-xs mb-2">Description</label>
+                            <textarea cols="30" rows="3" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-8 rounded-lg focus:border-gray-700" placeholder="Description" name="description" required><?php echo e(old('description')); ?></textarea>
                         </div>
 
                         <div class="relative mt-2">

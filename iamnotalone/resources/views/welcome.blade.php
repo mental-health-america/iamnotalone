@@ -94,7 +94,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden relative mx-16 hidden md:block">
                 <div class="text-start w-1/2 py-12 pl-8 sm:px-6 lg:py-16 lg:px-8 z-20">
                     <h4 class="text-3xl text-black dark:text-white mb-2">
-                        Lack of connnectedness can worsen mental and physical conditions.
+                        Lack of connectedness can worsen mental and physical conditions.
                     </h4>
                     <p>
                         While also increasing the risk of death.
@@ -114,7 +114,7 @@
                 <div class="text-start w-full py-8 z-20">
                     <div class="bg-gray-200 opacity-80 p-4">
                         <h4 class="text-xl text-black dark:text-white mb-2">
-                            Lack of connnectedness can worsen mental and physical conditions.
+                            Lack of connectedness can worsen mental and physical conditions.
                         </h4>
                         <p class="text-xs">
                             While also increasing the risk of death.

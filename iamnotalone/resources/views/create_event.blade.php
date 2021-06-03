@@ -10,15 +10,15 @@
                     @csrf
                     <div class="mb-6">
                         <h1 class="font-medium uppercase tracking-wider text-3xl mb-10 w-full text-center text-black">
-                            Create your Event
+                            Create your Activity
                         </h1>
-                        <p class="text-sm sm:text-center">Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
+                        <p class="text-sm sm:text-center">Name your activity and tell activity-goers why they should come. Add details that highlight what makes it unique.</p>
                     </div>
 
                     <div class="">
                         <div class="py-2 text-left">
-                            <label for="event_name" class="uppercase block text-xs mb-2">Event Name</label>
-                            <input type="text" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Event name" name="name" required value="{{old('name')}}"/>
+                            <label for="event_name" class="uppercase block text-xs mb-2">Activity Name</label>
+                            <input type="text" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Activity name" name="name" required value="{{old('name')}}"/>
                         </div>
 
                         <div class="py-2 text-left">
@@ -30,7 +30,7 @@
                             <div class="py-2 text-left">
                                 <label for="event_name" class="uppercase block text-xs mb-2">Category</label>
                                 <select name="category" id="category" required class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700">
-                                    <option value="">Select Event Category</label>
+                                    <option value="">Select Activity Category</label>
                                     <option value="Community">Support group</label>
                                     <option value="Conference">Conference</label>
                                     <option value="Training">Training</label>
@@ -40,19 +40,19 @@
                             </div>
 
                             <div class="py-2 text-left">
-                                <label for="event_name" class="uppercase block text-xs mb-2">Event Banner (png, jpg, webp; max:200kb)</label>
+                                <label for="event_name" class="uppercase block text-xs mb-2">Activity Banner (png, jpg, webp; max:200kb)</label>
                                 <input type="file" class="border text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700" required accept="image/*" name="banner" placeholder="Upload Image" value="{{old('banner')}}"/>
                             </div>
                         </div>
 
                         <div class="py-2 text-left">
-                            <label for="event_name" class="uppercase block text-xs mb-2">Event Description</label>
-                            <textarea cols="30" rows="3" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-8 rounded-lg focus:border-gray-700" placeholder="Event Description" name="description" required>{{old('description')}}</textarea>
+                            <label for="event_name" class="uppercase block text-xs mb-2">Activity Description</label>
+                            <textarea cols="30" rows="3" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-8 rounded-lg focus:border-gray-700" placeholder="Activity Description" name="description" required>{{old('description')}}</textarea>
                         </div>
 
                         <div class="relative mt-2">
                             <input type="checkbox" name="peers" id="peers" value="1" class="inline-block align-middle" />
-                            <label class="inline-block align-middle text-xs uppercase" for="accomodation">Click here if this event is for Peers only</label>
+                            <label class="inline-block align-middle text-xs uppercase" for="accomodation">Click here if this activity is for Peers only</label>
                         </div>
 
                         <div class="relative mt-2">

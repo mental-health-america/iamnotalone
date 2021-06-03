@@ -3,12 +3,12 @@
     <div class="flex flex-row mt-4 justify-items-center">
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
             <h1 class="font-medium text-3xl font-bold mb-4">{{$pendingEvents}}</h1>
-            <p class="uppercase text-xs">Pending Event Request</p>
+            <p class="uppercase text-xs">Pending Activity Request</p>
         </div>
 
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
             <h1 class="font-medium text-3xl font-bold mb-4">{{$approvedEvents}}</h1>
-            <p class="uppercase text-xs">Approved Events</p>
+            <p class="uppercase text-xs">Approved Activity</p>
         </div>
 
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
@@ -23,7 +23,7 @@
     </div>
 
     <div class="w-full px-4 justify-items-center mt-8">
-        <input type="text" name="" id="search" class="text-center block mx-auto border-2 text-lg font-medium border-gray-100 focus:outline-none block w-full px-10 py-4 rounded-lg focus:border-gray-700" placeholder="Search by Event Name, Event Type, Event Organizer, Location, Status">
+        <input type="text" name="" id="search" class="text-center block mx-auto border-2 text-lg font-medium border-gray-100 focus:outline-none block w-full px-10 py-4 rounded-lg focus:border-gray-700" placeholder="Search by Activity Name, Activity Type, Activity Organizer, Location, Status">
     </div>
 
     
@@ -31,8 +31,8 @@
         <table class="table table-auto min-w-full">
             <thead>
                 <tr class="text-gray-600 uppercase text-sm leading-normal">
-                    <th class="py-3 text-center">Event Name</th>
-                    <th class="py-3 text-center">Event Type</th>
+                    <th class="py-3 text-center">Activity Name</th>
+                    <th class="py-3 text-center">Activity Type</th>
                     <th class="py-3 text-center">Category</th>
                     <th class="py-3 text-center">Organizer</th>
                     <th class="py-3 text-center">Location</th>
@@ -101,17 +101,17 @@
                                         </a>
                                         @if (!$event->approved)
                                             <a href="{{route('admin.event.approve', ['id'=>$event->id])}}" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                                Approve Event
+                                                Approve Activity
                                             </a>
                                             <a href="#" id="openModal" 
                                                 class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white" 
                                                 data-fname="{{$event->organizer->first_name}}" data-lname="{{$event->organizer->last_name}}" data-uid="{{$event->user_id}}" data-eid="{{$event->id}}" onclick="openModal(this)">
-                                                Delete Event
+                                                Delete Activity
                                             </a>
                                         @endif
                                         @if ($event->approved)
                                             <a href="{{route('admin.training.remove', ['id'=>$event->id])}}" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                                Delete Event
+                                                Delete Activity
                                             </a>
                                         @endif
                                     </div>

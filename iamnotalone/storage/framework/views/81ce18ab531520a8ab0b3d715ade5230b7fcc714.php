@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
 
     <div class="w-full px-4 justify-items-center mt-8">
-        <input type="text" name="" id="search" class="block mx-auto border-2 text-lg text-center font-medium border-gray-100 focus:outline-none block w-full px-10 py-3 rounded-lg focus:border-gray-700" placeholder="Search by Event Name, Event Type, Event Organizer, Location, Status">
+        <input type="text" name="" id="search" class="block mx-auto border-2 text-lg text-center font-medium border-gray-100 focus:outline-none block w-full px-10 py-3 rounded-lg focus:border-gray-700" placeholder="Search by Activity Name, Activity Type, Activity Organizer, Location, Status">
     </div>
 
     
@@ -9,8 +9,8 @@
         <table class="min-w-max w-full table-auto" id="table">
             <thead>
                 <tr class="text-gray-600 uppercase text-sm leading-normal">
-                    <th class="py-6 px-6 text-center resize-x">Event Name</th>
-                    <th class="py-6 px-6 text-center resize-x">Event Type</th>
+                    <th class="py-6 px-6 text-center resize-x">Activity Name</th>
+                    <th class="py-6 px-6 text-center resize-x">Activity Type</th>
                     <th class="py-6 px-6 text-center resize-x">Category</th>
                     <th class="py-6 px-6 text-center resize-x">Organizer</th>
                     <th class="py-6 px-6 text-center resize-x">Location</th>

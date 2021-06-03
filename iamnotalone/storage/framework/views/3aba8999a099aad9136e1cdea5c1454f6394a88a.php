@@ -2,12 +2,12 @@
     <div class="flex flex-row mt-4 justify-items-center">
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
             <h1 class="font-medium text-3xl font-bold mb-4"><?php echo e($pendingEvents); ?></h1>
-            <p class="uppercase text-xs">Pending Event Request</p>
+            <p class="uppercase text-xs">Pending Activity Request</p>
         </div>
 
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
             <h1 class="font-medium text-3xl font-bold mb-4"><?php echo e($approvedEvents); ?></h1>
-            <p class="uppercase text-xs">Approved Events</p>
+            <p class="uppercase text-xs">Approved Activities</p>
         </div>
 
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
@@ -22,7 +22,7 @@
     </div>
 
     <div class="w-full px-4 justify-items-center mt-8">
-        <input type="text" name="" id="search" class="text-center block mx-auto border-2 text-lg font-medium border-gray-100 focus:outline-none block w-full px-10 py-4 rounded-lg focus:border-gray-700" placeholder="Search by Event Name, Event Type, Event Organizer, Location, Status">
+        <input type="text" name="" id="search" class="text-center block mx-auto border-2 text-lg font-medium border-gray-100 focus:outline-none block w-full px-10 py-4 rounded-lg focus:border-gray-700" placeholder="Search by Activity Name, Activity Type, Activity Organizer, Location, Status">
     </div>
 
     
@@ -30,8 +30,8 @@
         <table class="table table-auto min-w-full">
             <thead>
                 <tr class="text-gray-600 uppercase text-sm leading-normal">
-                    <th class="py-3 text-center">Event Name</th>
-                    <th class="py-3 text-center">Event Type</th>
+                    <th class="py-3 text-center">Activity Name</th>
+                    <th class="py-3 text-center">Activity Type</th>
                     <th class="py-3 text-center">Category</th>
                     <th class="py-3 text-center">Organizer</th>
                     <th class="py-3 text-center">Location</th>

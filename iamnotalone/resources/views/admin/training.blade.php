@@ -1,7 +1,7 @@
 @extends('admin.layout.master')
 @section('content')
     <div class="w-full px-4 justify-items-center mt-8">
-        <input type="text" name="" id="search" class="block mx-auto border-2 text-lg text-center font-medium border-gray-100 focus:outline-none block w-full px-10 py-3 rounded-lg focus:border-gray-700" placeholder="Search by Event Name, Event Type, Event Organizer, Location, Status">
+        <input type="text" name="" id="search" class="block mx-auto border-2 text-lg text-center font-medium border-gray-100 focus:outline-none block w-full px-10 py-3 rounded-lg focus:border-gray-700" placeholder="Search by Activity Name, Activity Type, Activity Organizer, Location, Status">
     </div>
 
     <div class="px-4 mt-8">

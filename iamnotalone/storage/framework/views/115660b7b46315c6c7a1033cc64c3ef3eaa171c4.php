@@ -22,7 +22,7 @@
                 </p>
 
                 <p>
-                    For Enquiries or Help, <br>Message Kat on: <br>
+                    For more information, <br>email Kat McIntosh at: <br>
                     <a href="mailto:kmcintosh@mhanational.org">kmcintosh@mhanational.org</a>
                 </p>
 

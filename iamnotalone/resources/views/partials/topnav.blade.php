@@ -16,7 +16,7 @@
             </div>   
         @endauth
         @guest
-            <a href="{{route('register')}}" class="border-r border-gray-100 pr-2 sm:px-3" id="register">Register</a>
+            <a href="{{route('register')}}" class="border-r border-gray-100 pr-2 sm:px-3" id="register">Create Account</a>
             <a href="{{route('login')}}" class="pl-2 sm:px-3" id="login">Login</a> 
         @endguest
     </span>

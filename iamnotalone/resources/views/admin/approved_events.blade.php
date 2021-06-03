@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="w-full px-4 justify-items-center mt-8">
-        <input type="text" name="" id="search" class="block mx-auto border-2 text-lg text-center font-medium border-gray-100 focus:outline-none block w-full px-10 py-3 rounded-lg focus:border-gray-700" placeholder="Search by Event Name, Event Type, Event Organizer, Location, Status">
+        <input type="text" name="" id="search" class="block mx-auto border-2 text-lg text-center font-medium border-gray-100 focus:outline-none block w-full px-10 py-3 rounded-lg focus:border-gray-700" placeholder="Search by Activity Name, Activity Type, Activity Organizer, Location, Status">
     </div>
 
     
@@ -10,8 +10,8 @@
         <table class="min-w-max w-full table-auto" id="table">
             <thead>
                 <tr class="text-gray-600 uppercase text-sm leading-normal">
-                    <th class="py-6 px-6 text-center resize-x">Event Name</th>
-                    <th class="py-6 px-6 text-center resize-x">Event Type</th>
+                    <th class="py-6 px-6 text-center resize-x">Activity Name</th>
+                    <th class="py-6 px-6 text-center resize-x">Activity Type</th>
                     <th class="py-6 px-6 text-center resize-x">Category</th>
                     <th class="py-6 px-6 text-center resize-x">Organizer</th>
                     <th class="py-6 px-6 text-center resize-x">Location</th>
@@ -76,16 +76,16 @@
 
                                     <div class="absolute right-0 mt-2 ml-10 w-32 bg-white rounded-md shadow-xl z-20 hidden" id="op{{$event->id}}">
                                         <a href="{{route('admin.event.details', ['id'=>$event->id])}}" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                            Event Details
+                                            Activity Details
                                         </a>
                                         @if (!$event->approved)
                                             <a href="{{route('admin.event.approve', ['id'=>$event->id])}}" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                                Approve Event
+                                                Approve Activity
                                             </a>
                                             <a href="#" id="openModal" 
                                                 class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white" 
                                                 data-fname="{{$event->organizer->first_name}}" data-lname="{{$event->organizer->last_name}}" data-uid="{{$event->user_id}}" data-eid="{{$event->id}}" onclick="openModal(this)">
-                                                Delete Event
+                                                Delete Activity
                                             </a>
                                         @endif
                                     </div>

@@ -76,10 +76,10 @@
                             <input type="text" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Platform" id="platform" name="platform" required/>
                         </div>
 
-                        <div class="relative mt-2">
+                        <!-- <div class="relative mt-2">
                             <input type="checkbox" name="accomodation" id="accomodation" value="1" class="inline-block align-middle" />
                             <label class="inline-block align-middle text-xs uppercase" for="accomodation">Click here if your event will be offering accomodation</label>
-                        </div>
+                        </div> -->
                         
                         <div class="py-2 mt-6">
                             <button type="submit" class="uppercase text-center border border-gray-100 focus:outline-none bg-primary text-white font-semibold tracking-wider block w-3/4 md:w-1/2 m-auto py-3 rounded-lg focus:border-gray-700 hover:bg-purple-700">

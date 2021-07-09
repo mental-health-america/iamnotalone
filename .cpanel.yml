@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/iamnotalone/iamnotalone/
+    - export DEPLOYPATH=/home/repositories/iamnotalone/
     - /bin/cp -R * $DEPLOYPATH
 
 

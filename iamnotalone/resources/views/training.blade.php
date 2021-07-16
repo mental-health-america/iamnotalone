@@ -25,12 +25,12 @@
                         $x = 1;
                     @endphp
                     @foreach ($materials as $material)
-                        <p class="my-1">
+                        <p class="my-1 pb-4">
                             <a href="/{{$material->material}}" target="_blank">Download Episode Material {{$x}}</a>
                         </p>
                         @php
                             ++$x;
-                        @endphp  
+                        @endphp
                     @endforeach
                 @else
                     <p class="my-2">No material available for download.</p>

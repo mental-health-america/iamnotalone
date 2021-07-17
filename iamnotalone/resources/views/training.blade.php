@@ -25,9 +25,10 @@
                         $x = 1;
                     @endphp
                     @foreach ($materials as $material)
-                        <p class="my-1 pb-4">
+                        <div class="my-1 pb-4">
+                            <h5>{{$material->title}}</h5>
                             <a href="/{{$material->material}}" target="_blank">Download Episode Material {{$x}}</a>
-                        </p>
+                        </div>
                         @php
                             ++$x;
                         @endphp

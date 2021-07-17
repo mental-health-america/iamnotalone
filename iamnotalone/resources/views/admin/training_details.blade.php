@@ -16,7 +16,7 @@
             Add New Episode
         </a>
     </div>
-    
+
     <div class="mt-8 w-full">
         <table class="min-w-max w-full table-auto" id="table">
             <thead>
@@ -32,7 +32,7 @@
                 @if (count($episodes))
                         @foreach ($episodes as $episode)
                             @php
-                                $materials = $episode->materials;   
+                                $materials = $episode->materials;
                             @endphp
                             <tr class="bg-white my-3 text-center">
                                 <td class="py-4 my-2">
@@ -46,17 +46,18 @@
                                         <ul>
                                             @foreach ($materials as $material)
                                                 <li>
-                                                    <a href="/{{$material->material}}" target="_blank" rel="noopener noreferrer">Download material {{$x}}</a>    
+                                                    <h5>{{$material->title}}</h5>
+                                                    <a href="/{{$material->material}}" target="_blank" rel="noopener noreferrer">Download material {{$x}}</a>
                                                 </li>
                                                 @php
                                                     $x++;
-                                                @endphp                                                
+                                                @endphp
                                             @endforeach
                                         </ul>
                                     @else
                                         No material
                                     @endif
-                                    
+
                                 </td>
                                 <td class="py-4 my-2">
                                     <a href="{{$episode->url}}" target="_blank" rel="noopener noreferrer">Watch</a>
@@ -124,7 +125,7 @@
     <div id="trainingModal" class="modal" style="width: 75%; max-width: 75%; padding: 5% 10%">
         <form class="text-center" method="POST" action="{{route('admin.training.update')}}" enctype="multipart/form-data">
             @csrf
-            
+
             <div class="py-2 text-left">
                 <label for="event_name" class="uppercase block text-xs mb-2">Training Title</label>
                 <input type="text" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Training title " name="title" value="{{$training->name}}" required/>

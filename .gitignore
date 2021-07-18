@@ -5,6 +5,11 @@
 ######################
 *.un~
 
+# Larvel #
+##########
+.env
+.evn.example
+
 # SASS #
 ##########
 .sass-cache

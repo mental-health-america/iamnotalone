@@ -307,14 +307,15 @@ class AdminController extends Controller
      */
     public function newTrainingEpisode(Request $request)
     {
+        
         $val = $request->validate([
             'title'=>'required',
             'url'=>'required',
             'training'=>'required',
+            'episode_description'=>'required',
             'material.*'=>'file|mimetypes:application/pdf'
         ]);
-
-        $episodeId = $this->trainingEpisodesController->new($request->title, $request->url, $request->training);
+        $episodeId = $this->trainingEpisodesController->new($request->title, $request->url, $request->training, $request->episode_description);
 
         if ($episodeId) {
 

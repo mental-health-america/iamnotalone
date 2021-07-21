@@ -17,12 +17,14 @@ class TrainingEpisodesController extends Controller
      * 
      * @return bool
      */
-    public function new($episode, $url, $trainingId)
+    public function new($episode, $url, $trainingId, $description)
     {
+        
         $series = new TrainingEpisodes();
         $series->title = $episode;
         $series->event_id = $trainingId;
         $series->url = $url;
+        $series->description = $description;
         if ($series->save()) {
             return $series->id;
         } else {

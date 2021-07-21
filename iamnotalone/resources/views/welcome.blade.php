@@ -18,6 +18,12 @@
                     </p>
                     <div class="lg:mt-0 lg:flex-shrink-0">
                         <div class="mt-12 inline-flex rounded-md shadow">
+                            <a href="{{route('event.new')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                        </div>
+                        or
+                        <div class="mt-12 inline-flex rounded-md shadow">
                             <a href="{{route('events')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                                 Browse Events <i class="uil uil-arrow-right"></i>
                             </a>
@@ -40,6 +46,12 @@
                     
                     <div class="lg:mt-0 lg:flex-shrink-0 px-4">
                         <div class="mt-12 inline-flex rounded-md shadow">
+                            <a href="{{route('event.new')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                        </div>
+                        or
+                        <div class="mt-12 inline-flex rounded-md shadow">
                             <a href="{{route('events')}}" class="py-2 px-8 mx-auto bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                                 Browse Events <i class="uil uil-arrow-right"></i>
                             </a>
@@ -59,6 +71,12 @@
                         I am not alone
                     </p>
                     <div class="lg:mt-0 lg:flex-shrink-0">
+                        <div class="mt-12 inline-flex rounded-md shadow">
+                            <a href="{{route('event.new')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                        </div>
+                        or
                         <div class="mt-12 inline-flex rounded-md shadow">
                             <a href="{{route('events')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                                 Browse Events <i class="uil uil-arrow-right"></i>
@@ -81,6 +99,12 @@
                     </div>
                     <div class="lg:mt-0 lg:flex-shrink-0 px-4">
                         <div class="mt-12 inline-flex rounded-md shadow">
+                            <a href="{{route('event.new')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                        </div>
+                        or
+                        <div class="mt-12 inline-flex rounded-md shadow">
                             <a href="{{route('events')}}" class="py-2 px-8 mx-auto bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                                 Browse Events <i class="uil uil-arrow-right"></i>
                             </a>
@@ -100,6 +124,12 @@
                         While also increasing the risk of death.
                     </p>
                     <div class="lg:mt-0 lg:flex-shrink-0">
+                        <div class="mt-12 inline-flex rounded-md shadow">
+                            <a href="{{route('event.new')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                        </div>
+                        or
                         <div class="mt-12 inline-flex rounded-md shadow">
                             <a href="{{route('events')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                                 Browse Events <i class="uil uil-arrow-right"></i>
@@ -121,6 +151,12 @@
                         </p>
                     </div>
                     <div class="lg:mt-0 lg:flex-shrink-0 px-4">
+                        <div class="mt-12 inline-flex rounded-md shadow">
+                            <a href="{{route('event.new')}}" class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                        </div>
+                        or
                         <div class="mt-12 inline-flex rounded-md shadow justfy-items-center">
                             <a href="{{route('events')}}" class="py-2 px-8 bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-sm shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg">
                                 Browse Events <i class="uil uil-arrow-right"></i>

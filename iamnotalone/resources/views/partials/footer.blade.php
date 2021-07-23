@@ -47,6 +47,12 @@
             <a href="https://arc.mhanational.org/find-affiliate" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
                 Find an Affiliate
             </a>
+            <a href="https://mhanational.org/terms-use" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
+                Terms Of Service
+            </a>
+            <a href="https://mhanational.org/privacy-policy" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
+                Privacy Policy
+            </a>
         </div>
 
         <!-- Links group 2-->

@@ -28,7 +28,7 @@
                         <p class="my-1 pb-2">
                             <span class="download_material_link">
                                 <strong>
-                                    <a href="/{{$material->material}}" target="_blank"  >{{$material->title}}:  Download Episode Material {{$x}}</a>
+                                    <a href="/{{$material->material}}" target="_blank"  >Download Episode Material {{$x}}</a>
                                 </strong>
                             </span>
                         <p style="display:block;" class="pb-2">

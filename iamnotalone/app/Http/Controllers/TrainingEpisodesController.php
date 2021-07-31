@@ -71,4 +71,27 @@ class TrainingEpisodesController extends Controller
     {
         return TrainingEpisodes::where('event_id', $eventId)->first();
     }
+    /**
+     * Update training episode
+     * 
+     * @param string $episode title
+     * @param string $url Youtube url
+     * @param integer $trainingId Event id
+     * @param integer $description Description
+     * 
+     * @return bool
+     */
+    public function updateEpisode($episode, $url, $trainingId, $description, $id)
+    {
+        
+        $episodes = TrainingEpisodes::find($id);
+        $episodes->title = $episode;
+        $episodes->description = $description;
+        $episodes->url = $url;
+        if ($episodes->save()) {
+            return $episodes->id;
+        } else {
+            return false;
+        }
+    }
 }

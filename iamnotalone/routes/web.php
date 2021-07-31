@@ -100,6 +100,7 @@ Route::prefix('admin')->group(
                 Route::post('training/details/update', [AdminController::class, 'updateTraining'])->name('training.update');
                 Route::post('training/episode/new', [AdminController::class, 'newTrainingEpisode'])->name('training.episode.new');
                 Route::get('training/episode/{id}/remove', [AdminController::class, 'removeTrainingEpisode'])->name('training.episode.remove');
+                Route::post('training/episode/{id}/update', [AdminController::class, 'updateTrainingEpisode'])->name('training.episode.update');
             }
         );
     }

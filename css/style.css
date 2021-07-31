@@ -38,3 +38,25 @@ td:last-child {
 .bg-primary{
 	background-color: #516D96;
 }
+#loader {
+	position: absolute;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+	opacity: 0;
+}
+.modal-body{
+	padding-bottom: 64px;
+    padding-top: 50px;
+}
+#deleteEpisodeModal form{
+	height: 100%;
+}
+.clearfix{
+	display: flex;
+	justify-content: space-between;
+}

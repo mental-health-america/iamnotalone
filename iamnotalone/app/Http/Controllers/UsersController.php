@@ -61,16 +61,17 @@ class UsersController extends Controller
      */
     public function createEvent(Request $request)
     {
+        
         $val = $request->validate([
             'name'=>'required',
             'description'=>'required',
             'category'=>'required',
             'peers'=>'nullable|boolean',
             'accomodation'=>'nullable',
-            'banner'=>'required|file|image|mimes:jpeg,jpg,png,webp|max:200'
+            'banner'=>'required|file|image|mimes:jpeg,jpg,png,webp|max:2048'
         ]);
-
         $path = 'event/banner/';
+        
         $extension = $request->file('banner')->getClientOriginalExtension();
         $fileName = 'banner-'.time().'.'.$extension;
 

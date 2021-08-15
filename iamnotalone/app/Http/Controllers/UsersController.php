@@ -169,11 +169,12 @@ class UsersController extends Controller
     public function updateOnlineEvent(Request $request)
     {
         $request->validate([
-            'link'=>'required',
+            'registration_link'=>'required_without:link',
+            'link'=>'required_without:registration_link',
             'platform'=>'required'
         ]);
         $eventId = Session('eventId');
-        if ($this->eventController->updateOnlineEvent($eventId, $request->link, $request->platform)) {
+        if ($this->eventController->updateOnlineEvent($eventId, $request->link, $request->platform, $request->registration_link)) {
             return redirect()->route('event.date');
         } else {
             notify()->info("Something went wrong, please try again", "Error");

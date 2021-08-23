@@ -25,9 +25,9 @@
                         </button>
                     </div>
                 </form>
-                <!-- <div class="text-center">
+                <div class="text-center">
                     <a href="{{route('password.request')}}" class="hover:underline">Forgot password?</a>
-                </div> -->
+                </div>
                 <div class="text-center mt-4 capitalize text-sm">
                     <span>
                         Not yet a member?

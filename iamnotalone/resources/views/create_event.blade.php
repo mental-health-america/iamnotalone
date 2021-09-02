@@ -40,8 +40,8 @@
                             </div>
 
                             <div class="py-2 text-left">
-                                <label for="event_name" class="block text-xs mb-2">Activity Banner (PNG, JPG; 750 * 250 px)</label>
-                                <input type="file" class="border text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700" accept="image/*" name="banner" placeholder="Upload Image" value="{{old('banner')}}"/>
+                                <label for="event_name" class="uppercase block text-xs mb-2">Activity Banner (png, jpg, webp; max:200kb)</label>
+                                <input type="file" class="border text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700" required accept="image/*" name="banner" placeholder="Upload Image" value="{{old('banner')}}"/>
                             </div>
                         </div>
 

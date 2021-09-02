@@ -132,17 +132,21 @@
                 <label for="event_name" class="uppercase block text-xs mb-2">Episode URL</label>
                 <input type="url" class="edit_url bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Episode URL" name="url" value="" required/>
             </div>
-
-            <div class="py-2 text-left">
-                <label for="event_name" class="uppercase block text-xs mb-2">Episode Description</label>
-                <input type="text" class="edit_description bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Episode Description" name="episode_description" maxlength="255" value="" required/>
+            <div class="edit_on_file_description">
+                <div class="file_description">
+                    <div class="py-2 text-left">
+                        <label for="event_name" class="uppercase block text-xs mb-2">Episode Material (PDF ONLY)<span style="padding-left:4px"><a href="#" data-toggle="tooltip" data-placement="auto right" title="Uploading new files will replace your earlier uploaded files for the episodes!" style="display: inline-block;"><img class="object-cover h-auto md:h-96 w-full rounded-xl" alt="information icon" style="height: 21px;width: 21px;" src="{{asset('images/information.png')}}"></a></span></label>
+                        <input type="file" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Material" name="material[]" accept="application/pdf"/>
+                    </div>
+                    <div class="py-2 text-left">
+                        <label for="event_name" class="uppercase block text-xs mb-2">Episode Description</label>
+                        <input type="text" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Episode Description" name="episode_description[]" maxlength="255" required style="display:inline-block; width: 93%"/>
+                        <span class="add_more_files" data-event="edit" style="display:inline-block;"><a href="#"><img src="{{ asset('images/plus.png')}}" alt="information icon" style="height: 21px;width: 21px;" /></a></span>
+                    </div>
+                    
+                </div>
             </div>
-
-            <div class="py-2 text-left">
-                <label for="event_name" class="uppercase block text-xs mb-2">Episode Material (PDF ONLY: Accepts multiple files.)<span style="padding-left:4px"><a href="#" data-toggle="tooltip" data-placement="auto right" title="Uploading new files will replace your earlier uploaded files for the episodes!" style="display: inline-block;"><img class="object-cover h-auto md:h-96 w-full rounded-xl" alt="information icon" style="height: 21px;width: 21px;" src="{{asset('images/information.png')}}"></a></span></label>
-                
-                <input type="file" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700" placeholder="Material" name="material[]" multiple accept="application/pdf"/>
-            </div>
+            
             <input type="hidden" name="training" value="{{$training->id}}">
 
             <div class="py-2 mt-6">
@@ -154,7 +158,7 @@
     </div>
 
     <!-- Modal HTML embedded directly into document -->
-    <div id="seriesModal" class="modal" style="width: 75%; max-width: 75%; padding: 5% 10%">
+    <div id="seriesModal" class="modal" style="width: 75%; max-width: 75%; padding: 5% 10%; overflow-y:auto; height: 750px">
         <form class="text-center" method="POST" action="{{route('admin.training.episode.new')}}" enctype="multipart/form-data">
             @csrf
             <div class="py-2 text-left">
@@ -167,14 +171,19 @@
                 <input type="url" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Episode URL" name="url" required/>
             </div>
 
-            <div class="py-2 text-left">
-                <label for="event_name" class="uppercase block text-xs mb-2">Episode Description</label>
-                <input type="text" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Episode Description" name="episode_description" maxlength="255" required/>
-            </div>
-
-            <div class="py-2 text-left">
-                <label for="event_name" class="uppercase block text-xs mb-2">Episode Material (PDF ONLY: Accepts multiple files.)</label>
-                <input type="file" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Material" name="material[]" multiple accept="application/pdf"/>
+            <div class="add_on_file_description">
+                <div class="file_description">
+                    <div class="py-2 text-left">
+                        <label for="event_name" class="uppercase block text-xs mb-2">Episode Material (PDF ONLY)</label>
+                        <input type="file" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Material" name="material[]" accept="application/pdf"/>
+                    </div>
+                    <div class="py-2 text-left">
+                        <label for="event_name" class="uppercase block text-xs mb-2">Episode Description</label>
+                        <input type="text" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Episode Description" name="episode_description[]" style="display:inline-block; width:93%;" maxlength="255" required/>
+                        <span class="add_more_files" data-event="add" style="display:inline-block;"><a href="#"><img src="{{ asset('images/plus.png')}}" alt="information icon" style="height: 21px;width: 21px;" /></a></span>
+                    </div>
+                    
+                </div>
             </div>
             <input type="hidden" name="training" value="{{$training->id}}">
 
@@ -240,34 +249,20 @@
 @endsection
 @section('js')
     <script>
+        $(document).on('click', ".add_more_files", function(e) {
+            var data = $(this).attr('data-event');
+            localStorage.setItem("data",data);
+            var local_storer = localStorage.getItem("data");
+            var html = '<div class="file_description"> <div class="py-2 text-left"> <label for="event_name" class="uppercase block text-xs mb-2">Episode Material</label> <input type="file" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Material" name="material[]" accept="application/pdf"/> </div> <div class="py-2 text-left" style="display:inline-block; width:85%"> <label for="event_name" class="uppercase block text-xs mb-2">Episode Description</label> <input type="text" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Episode Description" name="episode_description[]" maxlength="255" required/> </div> <span class="add_more_files" data-event='+ local_storer +' style="display:inline-block; width: 6%"><a href="#"><img src="{{ asset('images/plus.png')}}" alt="information icon" style="height: 21px;width: 21px;" /></a></span> <span class="remove_files" style="display:inline-block; width: 6%"><a href="#"><img src="{{ asset('images/red-minus.png')}}" alt="information icon" style="height: 20px;width: 29px;" /></a></span> </div>';
+            data == 'add' ? $(html).insertAfter(".add_on_file_description .file_description:last") : $(html).insertAfter(".edit_on_file_description .file_description:last");
+            localStorage.removeItem("data");
+
+            
+        })
+        $(document).on("click", ".remove_files", function(e) {
+            $(this).closest('.file_description').remove();
+        });
         document.getElementById('training').classList.add('active');
-        // display a modal (small modal)
-        // $(document).on('click', '#deleteConfirmed', function(event) {
-        //     event.preventDefault();
-        //     let href = $(this).attr('data-attr');
-        //     console.log(href)
-        //     $.ajax({
-        //         url: href
-        //         , beforeSend: function() {
-        //             $('#loader').show();
-        //         },
-        //         // return the result
-        //         success: function(result) {
-        //             console.log('Success reached');
-        //         }
-        //         , complete: function() {
-        //             $('#loader').hide();
-        //             location.reload(true);
-        //             console.log('Complete reached');
-        //         }
-        //         , error: function(jqXHR, testStatus, error) {
-        //             console.log(error);
-        //             alert("Page " + href + " cannot open. Error:" + error);
-        //             $('#loader').hide();
-        //         }
-        //         , timeout: 8000
-        //     })
-        // });
         $(document).click(function (e) {
             if (!$(e.target).is('#actionDot')) {
                 $('.deleteEpisode').css(" ", "none");
@@ -278,10 +273,8 @@
             var episodeID = $(this).attr('data-id');
             var episodeURL = $(this).attr('data-episodeUrl');
             var episodeDescription = $(this).attr('data-description');
-            //showHideMenu('op'+episodeID);
             var episodeTitle = $(this).attr('data-title');
             var editUrl = $(this).attr('data-url');
-            console.log(episodeID+ ' '+episodeURL+ ' '+episodeDescription+ ' '+episodeTitle+ ' '+editUrl)
             $(".edit_title").val(episodeTitle);
             $(".edit_url").val(episodeURL);
             $(".edit_description").val(episodeDescription);

@@ -15,12 +15,11 @@ class EpisodeMaterialController extends Controller
      * 
      * @return bool
      */
-    public function new($episodeId, $material, $description)
+    public function new($episodeId, $material)
     {
         $episdeMaterial = new EpisodeMaterial();
         $episdeMaterial->episode_id = $episodeId;
         $episdeMaterial->material = $material;
-        $episdeMaterial->description = $description;
         return $episdeMaterial->save();
     }
 

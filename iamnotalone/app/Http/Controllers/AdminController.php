@@ -200,7 +200,7 @@ class AdminController extends Controller
             'start_time'=>'required',
             'end_date'=>'required',
             'description'=>'required',
-            'banner'=>'required|file|image|mimes:jpeg,jpg,png,webp'
+            'banner'=>'required|file|image|mimes:jpeg,jpg,png,webp|max:200'
         ]);
 
         $path = 'event/banner/';
@@ -239,7 +239,7 @@ class AdminController extends Controller
             'start_date'=>'required',
             'start_time'=>'required',
             'end_date'=>'required',
-            'banner'=>'file|image|mimes:jpeg,jpg,png,webp'
+            'banner'=>'file|image|mimes:jpeg,jpg,png,webp|max:200'
         ]);
 
         $banner = null;
@@ -307,6 +307,7 @@ class AdminController extends Controller
      */
     public function newTrainingEpisode(Request $request)
     {
+        
         $val = $request->validate([
             'title'=>'required',
             'url'=>'required',
@@ -314,8 +315,7 @@ class AdminController extends Controller
             'episode_description'=>'required',
             'material.*'=>'file|mimetypes:application/pdf'
         ]);
-
-        $episodeId = $this->trainingEpisodesController->new($request->title, $request->url, $request->training);
+        $episodeId = $this->trainingEpisodesController->new($request->title, $request->url, $request->training, $request->episode_description);
 
         if ($episodeId) {
 
@@ -323,14 +323,14 @@ class AdminController extends Controller
             $c = 1;
 
             if ($materials) {
-                foreach ($materials as $key => $material) {
+                foreach ($materials as $material) {
                     $path = 'training/episode/material/';
                     $extension = $material->getClientOriginalExtension();
                     $fileName = 'material-' .$c. '-'. time() . '.' . $extension;
 
                     if ($this->fileHandler->uploadFile($path, $fileName, $material)) {
                         $mp = 'storage/' . $path . $fileName;
-                        $this->episodeMaterial->new($episodeId, $mp, $request->episode_description[$key]);
+                        $this->episodeMaterial->new($episodeId, $mp);
                     }
                     ++$c;
                 }
@@ -370,29 +370,28 @@ class AdminController extends Controller
      * @return mixed
      */
     public function updateTrainingEpisode($id, Request $request)
-    {   
-        $val = $request->validate([
+    {   $val = $request->validate([
             'title'=>'required',
             'url'=>'required',
             'training'=>'required',
             'episode_description'=>'required',
             'material.*'=>'file|mimetypes:application/pdf'
         ]); 
-        $episodeId = $this->trainingEpisodesController->updateEpisode($request->title, $request->url, $request->training, $id);
+        $episodeId = $this->trainingEpisodesController->updateEpisode($request->title, $request->url, $request->training, $request->episode_description, $id);
         if ($episodeId) {
             EpisodeMaterial::where('episode_id', $episodeId)->delete();
             $materials = $request->file('material');
             $c = 1;
 
             if ($materials) {
-                foreach ($materials as $key => $material) {
+                foreach ($materials as $material) {
                     $path = 'training/episode/material/';
                     $extension = $material->getClientOriginalExtension();
                     $fileName = 'material-' .$c. '-'. time() . '.' . $extension;
 
                     if ($this->fileHandler->uploadFile($path, $fileName, $material)) {
                         $mp = 'storage/' . $path . $fileName;
-                        $this->episodeMaterial->new($episodeId, $mp, $request->episode_description[$key]);
+                        $this->episodeMaterial->new($episodeId, $mp);
                     }
                     ++$c;
                 }

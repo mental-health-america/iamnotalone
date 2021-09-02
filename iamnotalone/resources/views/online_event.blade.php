@@ -27,22 +27,11 @@
                 <form class="" method="POST" action="{{route('event.update.online')}}">
                     @csrf
                     <div class="">
-                        <div class="control-group">
-                            <label class="radio" for="link_reg">
-                                <input type="radio" name="radio_link" id="link_reg" value="registration_link" style="margin: 0 5px 0 10px;">Registration Link
-                            </label>
-                            <label class="radio" for="link_event">
-                                <input type="radio" name="radio_link" id="link_event" value="event_link" style="margin: 0 5px 0 10px;">Event Link
-                            </label>
-                            <div class="py-2 text-left registration_link">
-                                <label for="registration_link" class="uppercase block text-xs mb-2">Registration Link</label>
-                                <input type="url" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 registration_link" placeholder="Registration link" id="registration_link" name="registration_link"/>
-                            </div>
-                            <div class="py-2 text-left event_link">
-                                <label for="event_link" class="uppercase block text-xs mb-2">Event Link</label>
-                                <input type="url" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 event_link" placeholder="Event link" id="event_link" name="link"/>
-                            </div>
+                        <div class="py-2 text-left">
+                            <label for="event_link" class="uppercase block text-xs mb-2">Event Link</label>
+                            <input type="url" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Event link" id="event_link" name="link" required/>
                         </div>
+
                         <div class="py-2 text-left">
                             <label for="platform" class="uppercase block text-xs mb-2">Platform</label>
                             <input type="text" list="platforms" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Platform" id="platform" name="platform" required/>
@@ -68,27 +57,5 @@
 @section('js')
     <script>
         document.getElementById("events").classList.add('link-active');
-        $(function (){
-            $(".event_link").hide();
-            $(".registration_link").hide();
-            $("#registration_link").attr("disabled", "disabled");
-            $("#event_link").attr("disabled", "disabled");
-            $("#link_event, #link_reg").click(function (){
-                var value = $(this).val();
-                $(".event_link").hide();
-                $(".registration_link").hide();
-                $("#registration_link").attr("disabled", "disabled");
-                $("#event_link").attr("disabled", "disabled");
-                $(this).closest(".control-group").find("input[type=url]")
-
-                // ...then find the text field whose class name matches
-                // the value of this radio button ("dollars" or "percent")...
-                .end().find("." + value).show()
-
-                // ...and enable that text field
-                .removeAttr("disabled")     
-                .end();
-            });
-            });
     </script>
 @endsection

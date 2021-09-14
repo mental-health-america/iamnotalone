@@ -11,10 +11,10 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden relative mx-16 hidden md:block">
                 <div class="text-start w-1/2 py-12 pl-8 sm:px-6 lg:py-16 lg:px-8 z-20">
                     <h4 class="text-3xl text-black dark:text-white mb-2">
-                        You don't have to be alone anymore
+                        You don’t have to be alone anymore
                     </h4>
                     <p>
-                        Meet and Connect with new people and begin the process of building meaningful friendship
+                        Meet and Connect with new people. Begin the process of building meaningful friendships.
                     </p>
                     <div class="lg:mt-0 lg:flex-shrink-0">
                         <div class="mt-12 inline-flex rounded-md shadow">
@@ -37,10 +37,10 @@
                 <div class="text-start w-full py-8 z-20">
                     <div class="bg-gray-200 opacity-80 p-4">
                         <h4 class="text-xl text-black dark:text-white mb-2">
-                            You don't have to be alone anymore
+                            You don’t have to be alone anymore
                         </h4>
                         <p class="text-xs">
-                            Meet and Connect with new people and begin the process of building meaningful friendship
+                            Meet and Connect with new people. Begin the process of building meaningful friendships.
                         </p>
                     </div>
                     
@@ -65,10 +65,10 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden relative mx-16 hidden md:block">
                 <div class="text-start w-1/2 py-12 pl-8 sm:px-6 lg:py-16 lg:px-8 z-20">
                     <h4 class="text-3xl text-black dark:text-white mb-2">
-                        Many Americans struggle with loneliness and Isolation
+                        3 in 5 Americans feel lonely
                     </h4>
                     <p>
-                        I am not alone
+                        Lack of connectedness can worsen mental and physical conditions.
                     </p>
                     <div class="lg:mt-0 lg:flex-shrink-0">
                         <div class="mt-12 inline-flex rounded-md shadow">
@@ -91,10 +91,10 @@
                 <div class="text-start w-full py-8 z-20">
                     <div class="bg-gray-200 opacity-80 p-4">
                         <h4 class="text-xl text-black dark:text-white mb-2">
-                            Many Americans struggle with loneliness and Isolation
+                            3 in 5 Americans feel lonely
                         </h4>
                         <p class="text-xs">
-                            I am not alone
+                            Lack of connectedness can worsen mental and physical conditions.
                         </p>
                     </div>
                     <div class="lg:mt-0 lg:flex-shrink-0 px-4">
@@ -118,10 +118,10 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden relative mx-16 hidden md:block">
                 <div class="text-start w-1/2 py-12 pl-8 sm:px-6 lg:py-16 lg:px-8 z-20">
                     <h4 class="text-3xl text-black dark:text-white mb-2">
-                        Lack of connectedness can worsen mental and physical conditions.
+                        Loneliness is bad for your health
                     </h4>
                     <p>
-                        While also increasing the risk of death.
+                        It can cause the same amount of damage to your lifespan as smoking 15 cigarettes a day.
                     </p>
                     <div class="lg:mt-0 lg:flex-shrink-0">
                         <div class="mt-12 inline-flex rounded-md shadow">
@@ -144,10 +144,10 @@
                 <div class="text-start w-full py-8 z-20">
                     <div class="bg-gray-200 opacity-80 p-4">
                         <h4 class="text-xl text-black dark:text-white mb-2">
-                            Lack of connectedness can worsen mental and physical conditions.
+                            Loneliness is bad for your health
                         </h4>
                         <p class="text-xs">
-                            While also increasing the risk of death.
+                            It can cause the same amount of damage to your lifespan as smoking 15 cigarettes a day.
                         </p>
                     </div>
                     <div class="lg:mt-0 lg:flex-shrink-0 px-4">
@@ -231,7 +231,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-		var mySwiper = new Swiper ('.swiper-container', {
+        var mySwiper = new Swiper ('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
@@ -256,6 +256,6 @@
                 el: '.swiper-scrollbar',
             },
         })
-	</script>
+    </script>
     <script src="{{asset('js/events_filter.js')}}"></script>
 @endsection

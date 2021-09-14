@@ -122,9 +122,9 @@
                     style="height: auto; max-height: 1500px; transition: all 200ms ease 0ms; opacity: 1;">
                     <div class="m-0 p-b-30 dark-gray fl fl-wrap">
                         <p>To list an activity on MHA’s I Am Not Alone, follow these three simple steps:<ol>
-                        <li>Sign Up or Log In to your account. You will be redirected to the homepage.</li>
-                        <li>Click CREATE EVENT on the top right-hand corner of the homepage.</li>
-                        <li>Follow the steps to list your activity.</li></ol></p>
+                        <li>1. Sign Up or Log In to your account. You will be redirected to the homepage.</li>
+                        <li>2. Click CREATE EVENT on the top right-hand corner of the homepage.</li>
+                        <li>3. Follow the steps to list your activity.</li></ol></p>
                     </div>
                 </div>
             </div><button class="clickable m-l-20 green fnt-24 p-h-20">

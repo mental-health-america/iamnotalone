@@ -61,7 +61,7 @@
                         </div>
 
                         <div class="py-4 hidden text-left" id="adiv" style="display: none">
-                            <label class="uppercase block text-xs mb-2">Type of Accomodation(You can select multiple options)</label> 
+                            <label class="uppercase block text-xs mb-2">Types of Accommodation (You can select multiple options)</label> 
                             <div class="pl-6">
                                 <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="ASL Interpreter"> ASL Interpreter</label>
                                 <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="Communication Access in Real-Time (CART services)"> Communication Access in Real-Time (CART services)</label>

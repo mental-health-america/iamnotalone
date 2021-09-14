@@ -253,7 +253,7 @@
                 <div class="overflow-hidden"
                     style="height: auto; max-height: 1500px; transition: all 200ms ease 0ms; opacity: 1;">
                     <div class="m-0 p-b-30 dark-gray fl fl-wrap">
-                        <p>To access MHA’s I Am Not Alone, visit <a href="iamnotalone.mhanational.org"></a>iamnotalone.mhanational.org</p>.</p>
+                        <p>To access MHA’s I Am Not Alone, visit <a href="iamnotalone.mhanational.org">iamnotalone.mhanational.org</a></p>.</p>
                     </div>
                 </div>
             </div><button class="clickable m-l-20 green fnt-24 p-h-20">

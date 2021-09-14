@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Auth\Events\PasswordReset;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,12 +46,12 @@ Route::get('/reset-password/{token}', function ($token) {
     return view('auth.reset-password', ['token' => $token]);
 })->middleware('guest')->name('password.reset');
 Route::post('/reset-password', function (Request $request) {
+    
     $request->validate([
         'token' => 'required',
         'email' => 'required|email',
         'password' => 'required|min:8|confirmed',
     ]);
-
     $status = Password::reset(
         $request->only('email', 'password', 'password_confirmation', 'token'),
         function ($user, $password) {
@@ -63,6 +64,7 @@ Route::post('/reset-password', function (Request $request) {
             event(new PasswordReset($user));
         }
     );
+    
     if($status === Password::PASSWORD_RESET){
         notify()->success(__($status));
         return redirect()->route('login')->with('status', __($status));
@@ -71,6 +73,13 @@ Route::post('/reset-password', function (Request $request) {
        return  back()->withErrors(['email' => [__($status)]]);
     }
 })->middleware('guest')->name('password.update');
+
+//News Letter
+Route::post('/newsletter', [NewsController::class, 'createNewsletter'])->name('newsletter');
+//FAQ
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
 //Home route
 Route::Get('/', [ExtraController::class, 'home'])->name('home');
 //Events route

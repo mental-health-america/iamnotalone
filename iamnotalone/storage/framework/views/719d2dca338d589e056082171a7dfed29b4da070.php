@@ -1,7 +1,7 @@
 <?php if(session()->get('notify.model') === 'smiley'): ?>
-    <div class="fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+    <div class="notify fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
         <div
-            x-data="{ show: false }"
+            x-data="{ show: <?php if(session()->get('notify.model') === 'smiley'): ?> true <?php else: ?> false <?php endif; ?> }"
             x-init="setTimeout(() => { show = true }, 500)"
             x-show="show"
             x-description="Notification panel, show/hide based on alert state."

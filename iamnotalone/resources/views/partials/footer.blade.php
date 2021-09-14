@@ -33,7 +33,7 @@
         <div class="md:text-center md:w-2/12 mb-6 pr-6">
             <!-- Links -->
             <a href="#" rel="noopener nofollow" class="mb-3 block text-white  text-sm md:text-xl font-medium">
-                About Us
+                About
             </a>
             <a href="https://www.mhanational.org/about" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
                 Who We Are
@@ -46,6 +46,9 @@
             </a>
             <a href="https://arc.mhanational.org/find-affiliate" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
                 Find an Affiliate
+            </a>
+            <a href="{{route('faq')}}" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
+                FAQ
             </a>
             <a href="https://mhanational.org/terms-use" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
                 Terms Of Service
@@ -117,6 +120,22 @@
             <a href="https://www.instagram.com/mentalhealthamerica" class="mx-2" rel="noopener nofollow" target="_blank">
                 <img src="{{asset('images/vectors/instagram.png')}}" class="w-8 h-8" alt="">
             </a>
+            <form method="post" id="newsletter_form" action="{{route('newsletter')}}">
+                @csrf
+                <div class="newsletter">
+                    <input type="email" class="border-2 text-sm border-gray-100 focus:outline-none p-2 rounded-lg focus:border-gray-700 newsletter" placeholder="NewsLetter" id="newsletter" name="newsletter"/>
+                    <input type="submit" name="Subscribe" class="form-control" value="Subscribe" style="    background-color: black;color: white; height: 39px; width: 87px; border-radius: 50px;" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="sponsor">
+        <div class="sponsor-image" style="display: flex; justify-content: center;">
+            <img src="{{asset('images/sponsors-logos.png')}}" alt="MHS Logo">
+            
+        </div>
+        <div class="sponsor-text" style="--tw-text-opacity: 1;color: rgba(255,255,255,var(--tw-text-opacity)); padding: 0px 69px 14px; text-align: center;">
+            <p>MHA’s I Am Not Alone is made possible through the philanthropic contributions from Janseen Pharmaceuticals. For more information about this program, please contact Patrick Hendry, Vice President of Peer Advocacy, Supports, and Services, at phendry@mhanational.org.</p>
         </div>
     </div>
 

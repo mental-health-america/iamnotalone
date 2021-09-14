@@ -17,14 +17,13 @@ class TrainingEpisodesController extends Controller
      * 
      * @return bool
      */
-    public function new($episode, $url, $trainingId, $description)
+    public function new($episode, $url, $trainingId)
     {
         
         $series = new TrainingEpisodes();
         $series->title = $episode;
         $series->event_id = $trainingId;
         $series->url = $url;
-        $series->description = $description;
         if ($series->save()) {
             return $series->id;
         } else {
@@ -81,12 +80,11 @@ class TrainingEpisodesController extends Controller
      * 
      * @return bool
      */
-    public function updateEpisode($episode, $url, $trainingId, $description, $id)
+    public function updateEpisode($episode, $url, $trainingId, $id)
     {
         
         $episodes = TrainingEpisodes::find($id);
         $episodes->title = $episode;
-        $episodes->description = $description;
         $episodes->url = $url;
         if ($episodes->save()) {
             return $episodes->id;

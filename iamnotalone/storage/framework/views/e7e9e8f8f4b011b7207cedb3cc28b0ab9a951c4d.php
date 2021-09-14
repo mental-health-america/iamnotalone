@@ -10,7 +10,6 @@
                     <div class="py-2 text-left">
                         <input type="email" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Email Address" name="email" required autofocus value="<?php echo e(old('email', '')); ?>" autofocus autocomplete="off"/>
                     </div>
-                    
                     <div class="flex flex-wrap items-stretch border-2   border-gray-100 w-full relative h-15 bg-white  rounded-lg  items-center rounded mb-4">
                         <input type="password" id="password" class="flex-shrink p-4 focus:outline-none flex-grow flex-auto text-sm w-px flex-1 relative self-center focus:border-gray-700" placeholder="Password" name="password" required/>
                         <div class="flex -mr-px">
@@ -25,9 +24,9 @@
                         </button>
                     </div>
                 </form>
-                <!--<div class="text-center">
-                    <a href="#" class="hover:underline">Forgot password?</a>
-                </div>-->
+                <div class="text-center">
+                    <a href="<?php echo e(route('password.request')); ?>" class="hover:underline">Forgot password?</a>
+                </div>
                 <div class="text-center mt-4 capitalize text-sm">
                     <span>
                         Not yet a member?

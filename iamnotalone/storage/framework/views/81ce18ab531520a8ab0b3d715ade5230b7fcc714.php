@@ -76,16 +76,16 @@
 
                                     <div class="absolute right-0 mt-2 ml-10 w-32 bg-white rounded-md shadow-xl z-20 hidden" id="op<?php echo e($event->id); ?>">
                                         <a href="<?php echo e(route('admin.event.details', ['id'=>$event->id])); ?>" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                            Event Details
+                                            Activity Details
                                         </a>
                                         <?php if(!$event->approved): ?>
                                             <a href="<?php echo e(route('admin.event.approve', ['id'=>$event->id])); ?>" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                                Approve Event
+                                                Approve Activity
                                             </a>
                                             <a href="#" id="openModal" 
                                                 class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white" 
                                                 data-fname="<?php echo e($event->organizer->first_name); ?>" data-lname="<?php echo e($event->organizer->last_name); ?>" data-uid="<?php echo e($event->user_id); ?>" data-eid="<?php echo e($event->id); ?>" onclick="openModal(this)">
-                                                Delete Event
+                                                Delete Activity
                                             </a>
                                         <?php endif; ?>
                                     </div>

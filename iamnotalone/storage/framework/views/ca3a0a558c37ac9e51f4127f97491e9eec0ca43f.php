@@ -16,7 +16,7 @@
             </div>   
         <?php endif; ?>
         <?php if(auth()->guard()->guest()): ?>
-            <a href="<?php echo e(route('register')); ?>" class="border-r border-gray-100 pr-2 sm:px-3" id="register">Register</a>
+            <a href="<?php echo e(route('register')); ?>" class="border-r border-gray-100 pr-2 sm:px-3" id="register">Create Account</a>
             <a href="<?php echo e(route('login')); ?>" class="pl-2 sm:px-3" id="login">Login</a> 
         <?php endif; ?>
     </span>

@@ -68,15 +68,18 @@ class UsersController extends Controller
             'category'=>'required',
             'peers'=>'nullable|boolean',
             'accomodation'=>'nullable',
-            'banner'=>'required|file|image|mimes:jpeg,jpg,png,webp|max:2048'
+            'banner'=>'file|image|mimes:jpeg,jpg,png,webp|max:2048'
         ]);
         $path = 'event/banner/';
+        $banner = NULL;
+        if($request->file('banner')){
+            $extension = $request->file('banner')->getClientOriginalExtension();
+            $fileName = 'banner-'.time().'.'.$extension;
+            if ($this->fileHandler->uploadFile($path, $fileName, $val['banner'])) {
+                $banner = 'storage/'.$path.$fileName;
+            }
+        }
         
-        $extension = $request->file('banner')->getClientOriginalExtension();
-        $fileName = 'banner-'.time().'.'.$extension;
-
-        if ($this->fileHandler->uploadFile($path, $fileName, $val['banner'])) {
-            $banner = 'storage/'.$path.$fileName;
             $eventId = $this->eventController->new(Auth::user()->id, $request->name, $request->category, $banner, $request->description, $request->has('peers'), null);
             if ($eventId) {
                 $accomodations = $request->accomodation;
@@ -97,11 +100,6 @@ class UsersController extends Controller
                 notify()->info("Something went wrong, please try again", "Notice");
                 return back();
             }
-
-        } else{
-            notify()->info('Something went wrong, please try again', 'Error');
-            return back();
-        }
     }
 
     /**

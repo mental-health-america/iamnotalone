@@ -146,7 +146,7 @@ unset($__errorArgs, $__bag); ?>
                 </div>
 
                 <div class="text-center mt-6 text-justify w-2/3 m-auto">
-                    <p class="text-xs">By clicking “Get Started”, I have read and accepted the I am not alone Terms Of Service, Community Guidelines.</p>
+                    <p class="text-xs">By clicking “Get Started”, I have read and accepted the I Am Not Alone <a href="https://mhanational.org/terms-use" class="font-light font-bold hover:text-indigo-800">Terms Of Service</a> and <a href="https://mhanational.org/privacy-policy" class="font-light font-bold hover:text-indigo-800">Privacy Policy</a>.</p>
                 </div>
             </div>
         </div>

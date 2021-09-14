@@ -7,7 +7,7 @@
 
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
             <h1 class="font-medium text-3xl font-bold mb-4"><?php echo e($approvedEvents); ?></h1>
-            <p class="uppercase text-xs">Approved Activities</p>
+            <p class="uppercase text-xs">Approved Activity</p>
         </div>
 
         <div class="bg-white w-1/5 text-center mx-auto py-10 rounded-lg">
@@ -101,17 +101,17 @@
                                         </a>
                                         <?php if(!$event->approved): ?>
                                             <a href="<?php echo e(route('admin.event.approve', ['id'=>$event->id])); ?>" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                                Approve Event
+                                                Approve Activity
                                             </a>
                                             <a href="#" id="openModal" 
                                                 class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white" 
                                                 data-fname="<?php echo e($event->organizer->first_name); ?>" data-lname="<?php echo e($event->organizer->last_name); ?>" data-uid="<?php echo e($event->user_id); ?>" data-eid="<?php echo e($event->id); ?>" onclick="openModal(this)">
-                                                Delete Event
+                                                Delete Activity
                                             </a>
                                         <?php endif; ?>
                                         <?php if($event->approved): ?>
                                             <a href="<?php echo e(route('admin.training.remove', ['id'=>$event->id])); ?>" class="block px-2 py-3 rounded text-sm capitalize text-gray-700 bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500 hover: hover:text-white">
-                                                Delete Event
+                                                Delete Activity
                                             </a>
                                         <?php endif; ?>
                                     </div>

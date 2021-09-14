@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
 
     <div class="w-5/6 justify-items-center my-8 mx-auto">
-        <input type="text" name="" id="" class="block mx-auto border-2 text-center text-sm border-gray-100 focus:outline-none block w-full p-3 rounded-lg focus:border-gray-700" placeholder="Search by Event Name, Event Type, Event Organizer, Location, Status">
+        <input type="text" name="" id="" class="block mx-auto border-2 text-center text-sm border-gray-100 focus:outline-none block w-full p-3 rounded-lg focus:border-gray-700" placeholder="Search by Activity Name, Activity Type, Activity Organizer, Location, Status">
     </div>
 
     <div class="overflow-x-auto">

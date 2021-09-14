@@ -25,12 +25,22 @@
                         $x = 1;
                     ?>
                     <?php $__currentLoopData = $materials; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $material): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <p class="my-1">
-                            <a href="/<?php echo e($material->material); ?>" target="_blank">Download Episode Material <?php echo e($x); ?></a>
+                        <p class="my-1 pb-4">
+                            <span class="download_material_link">
+                                <strong>
+                                    <a href="/<?php echo e($material->material); ?>" target="_blank"  >Download Episode Material <?php echo e($x); ?></a>
+                                </strong>
+                            </span>
+                            <p style="display:block;" class="pb-4">
+                                <span class="episode_description" style="padding-left:50px; word-break: break-all;">
+                                    <?php echo e($material->description); ?>
+
+                                </span>
+                            </p>
                         </p>
                         <?php
                             ++$x;
-                        ?>  
+                        ?>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 <?php else: ?>
                     <p class="my-2">No material available for download.</p>
@@ -54,4 +64,5 @@
         document.getElementById("events").classList.add('link-active');
     </script>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/iamnotalone/public_html/iamnotalone/resources/views/training.blade.php ENDPATH**/ ?>

@@ -16,7 +16,7 @@
             <span>Home</span>
           </a>
           <a id="events" href="<?php echo e(route('event.new')); ?>" class="lg:inline-flex lg:w-auto w-full px-4 py-2 rounded text-white md:text-black text-sm font-medium uppercase items-center justify-center hover:bg-indigo-500 hover:text-white">
-            <span>Create Event</span>
+            <span>Create Activity</span>
           </a>
           <div @click.away="open = false" class="relative" x-data="{ open: false }">
             <button @click="open = !open" class="lg:inline-flex lg:w-auto w-full px-4 py-2 rounded text-white md:text-black text-sm uppercase items-center justify-center hover:bg-indigo-400 hover:text-white">

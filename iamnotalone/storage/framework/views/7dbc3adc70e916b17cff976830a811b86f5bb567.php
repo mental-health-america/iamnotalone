@@ -61,7 +61,7 @@
 <?php if(isset($actionText)): ?>
 <?php $__env->slot('subcopy'); ?>
 <?php echo app('translator')->get(
-    "If you’re having trouble clicking the \":actionText\" button, copy and paste the URL below\n".
+    "If you're having trouble clicking the \":actionText\" button, copy and paste the URL below\n".
     'into your web browser:',
     [
         'actionText' => $actionText,

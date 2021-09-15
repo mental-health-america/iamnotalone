@@ -33,7 +33,7 @@
                 <img src="{{asset('images/slider/slide1.png')}}" class="absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-8"/>
             </div>
 
-            <div class="overflow-hidden relative md:hidden" style="background: #fff url({{asset('images/slider/slide1.png')}}); background-size: cover">
+            <div class="overflow-hidden relative md:hidden" style="background: #fff url({{asset('images/slider/slider-1.png')}}); background-size: cover">
                 <div class="text-start w-full py-8 z-20">
                     <div class="bg-gray-200 opacity-80 p-4">
                         <h4 class="text-xl text-black dark:text-white mb-2">
@@ -87,7 +87,7 @@
                 <img src="{{asset('images/slider/slide2.png')}}" class="absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-8"/>
             </div>
 
-            <div class="overflow-hidden relative md:hidden" style="background: #fff url({{asset('images/slider/slide2.png')}}); background-size: cover">
+            <div class="overflow-hidden relative md:hidden" style="background: #fff url({{asset('images/slider/slider-2.png')}}); background-size: cover">
                 <div class="text-start w-full py-8 z-20">
                     <div class="bg-gray-200 opacity-80 p-4">
                         <h4 class="text-xl text-black dark:text-white mb-2">
@@ -140,7 +140,7 @@
                 <img src="{{asset('images/slider/slide3.png')}}" class="absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-8"/>
             </div>
 
-            <div class="overflow-hidden relative md:hidden" style="background: #fff url({{asset('images/slider/slide3.png')}}); background-size: cover">
+            <div class="overflow-hidden relative md:hidden" style="background: #fff url({{asset('images/slider/slider-3.png')}}); background-size: cover">
                 <div class="text-start w-full py-8 z-20">
                     <div class="bg-gray-200 opacity-80 p-4">
                         <h4 class="text-xl text-black dark:text-white mb-2">

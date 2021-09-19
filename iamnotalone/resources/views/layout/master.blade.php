@@ -23,8 +23,8 @@
         }
     </style>
 </head>
-<body>    
-    @include('partials.topnav');
+<body>
+    @include('partials.topnav')
     @include('partials.header')
     @yield('content')
     @include('partials.footer')

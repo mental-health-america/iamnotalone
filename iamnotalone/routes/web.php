@@ -80,6 +80,10 @@ Route::post('/newsletter', [NewsController::class, 'createNewsletter'])->name('n
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
+//About
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 //Home route
 Route::Get('/', [ExtraController::class, 'home'])->name('home');
 //Events route

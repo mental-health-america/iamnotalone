@@ -32,7 +32,7 @@
         <!-- Links group 1-->
         <div class="md:text-center md:w-2/12 mb-6 pr-6">
             <!-- Links -->
-            <a href="#" rel="noopener nofollow" class="mb-3 block text-white  text-sm md:text-xl font-medium">
+            <a href="{{route('about')}}" rel="noopener nofollow" class="mb-3 block text-white  text-sm md:text-xl font-medium">
                 About
             </a>
             <a href="https://www.mhanational.org/about" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">

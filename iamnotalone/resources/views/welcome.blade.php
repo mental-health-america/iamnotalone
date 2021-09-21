@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="https://iamnotalone.mhanational.org/images/slider/slider-1.png"
+                    <img src="{{asset('images/slider/slider-updated-1.png')}}"
                          class="object-contain absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-10 z-20"/>
                 </div>
 
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="https://iamnotalone.mhanational.org/images/slider/slider-2.png"
+                    <img src="{{asset('images/slider/slider-updated-2.png')}}"
                          class="object-contain absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-10 z-20"/>
                 </div>
             </div>
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="https://iamnotalone.mhanational.org/images/slider/slider-3.png"
+                    <img src="{{asset('images/slider/slider-updated-3.png')}}"
                          class="object-contain absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-10 z-20"/>
                 </div>
             </div>

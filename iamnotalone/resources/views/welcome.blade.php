@@ -5,6 +5,7 @@
 @section('content')
     <!-- Header section starts here-->
     <!-- styles -->
+    <!-- styles -->
     <style>
         html,
         body {
@@ -20,107 +21,132 @@
         .swiper {
             width: 100%;
         }
+
+        .lime-slider {
+            background-color: rgba(151, 169, 38, 0.80);
+            padding: 30px 35px 45px 35px !important;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+        }
+
+        .bg-secondary {
+            background-color: #fff;
+            color: #385887;
+        }
+
+        .bg-secondary:hover {
+            background-color: #385887;
+            color: #fff;
+        }
+
     </style>
 
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
 
-                <div class="bg-white dark:bg-gray-800 overflow-hidden relative mx-8  md:block">
-                    <div class="text-start w-1/2 py-12 pl-4 sm:px-6 lg:py-16 lg:px-8 z-9999 sm:mx-1">
-                        <h4 class="text-3xl text-black dark:text-white mb-2">
-                            You don't have to be alone anymore
-                        </h4>
-                        <p>
-                            Meet and Connect with new people and begin the process of building meaningful friendship
-                        </p>
-                        <div class="lg:mt-0 lg:flex-shrink-0">
-                            <div class="mt-12 inline-flex rounded-md shadow">
-                                <a href="{{route('event.new')}}"
-                                   class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                    Register Event <i class="uil uil-arrow-right"></i>
-                                </a>
-                            </div>
-
-                            <div class="mt-2 inline-flex rounded-md shadow">
-                                <a href="{{route('events')}}"
-                                   class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                    Browse Events <i class="uil uil-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="{{asset('images/slider/slider-updated-1.png')}}"
-                         class="object-contain absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-10 z-20"/>
-                </div>
-
-
-            </div>
-            <div class="swiper-slide">
-                <div class="bg-white slider-z dark:bg-gray-800 overflow-hidden relative mx-8">
-                    <div class="text-start w-1/2 py-12 pl-8 sm:px-6 lg:py-16 lg:px-8 z-9999">
-                        <h4 class="text-3xl text-black dark:text-white mb-2">
-                            Many Americans struggle with loneliness and Isolation
-                        </h4>
-                        <p>
-                            I am not alone
-                        </p>
-                        <div class="lg:mt-0 lg:flex-shrink-0">
-                            <div class="mt-12 inline-flex rounded-md shadow">
-                                <a href="{{route('event.new')}}"
-                                   class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                    Register Event <i class="uil uil-arrow-right"></i>
-                                </a>
-                            </div>
-
-
-                            <div class="mt-2 inline-flex rounded-md shadow">
-                                <a href="{{route('events')}}"
-                                   class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                    Browse Events <i class="uil uil-arrow-right"></i>
-                                </a>
+            <!-- Swiper 1 -->
+            <div class="swiper-slide relative bg-no-repeat bg-cover bg-center h-screen w-full w-full"
+                 style="background-image:url({{asset('images/slider/slide-1-lg.png')}})">
+                <div class="flex w-full justify-center absolute bottom-20">
+                    <div class="text-white lime-slider mx-5">
+                        <div class="text-start z-9999">
+                            <h4 class="text-3xl text-white dark:text-white mb-2">
+                                You don't have to be alone anymore
+                            </h4>
+                            <p>
+                                Meet and Connect with new people and begin the process of building meaningful friendship
+                            </p>
+                            <div class="lg:mt-0 lg:flex-shrink-0">
+                                <div class="mt-12 inline-flex rounded-md shadow">
+                                    <a href="{{route('event.new')}}"
+                                       class="py-2 px-12 bg-secondary rounded-lg">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="mt-2 inline-flex rounded-md shadow">
+                                    <a href="{{route('events')}}"
+                                       class="py-2 px-12 bg-secondary rounded-lg">
+                                        Browse Events <i class="uil uil-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <img src="{{asset('images/slider/slider-updated-2.png')}}"
-                         class="object-contain absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-10 z-20"/>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="bg-white slider-z dark:bg-gray-800 overflow-hidden relative mx-8 sm:mx-1">
-                    <div class="text-start w-1/2 py-12 pl-8 sm:px-6 lg:py-16 lg:px-8 z-9999">
-                        <h4 class="text-3xl text-black dark:text-white mb-2">
-                            Lack of connectedness can worsen mental and physical conditions.
-                        </h4>
-                        <p>
-                            While also increasing the risk of death.
-                        </p>
-                        <div class="lg:mt-0 lg:flex-shrink-0">
-                            <div class="mt-12 inline-flex rounded-md shadow">
-                                <a href="{{route('event.new')}}"
-                                   class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                    Register Event <i class="uil uil-arrow-right"></i>
-                                </a>
-                            </div>
+            <!-- End Swiper 1 -->
 
-                            <div class="mt-2 inline-flex rounded-md shadow">
-                                <a href="{{route('events')}}"
-                                   class="py-2 px-12  bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                    Browse Events <i class="uil uil-arrow-right"></i>
-                                </a>
+            <!-- Swiper 2 -->
+            <div class="swiper-slide relative bg-no-repeat bg-cover bg-center h-screen w-full w-full"
+                 style="background-image:url({{asset('images/slider/slide-2-lg.png')}})">
+                <div class="flex w-full justify-center absolute bottom-20">
+                    <div class="text-white lime-slider mx-5">
+                        <div class="text-start z-9999">
+                            <h4 class="text-3xl text-white dark:text-white mb-2">
+                                Many Americans struggle with loneliness and Isolation
+                            </h4>
+                            <p>
+                                I am not alone
+                            </p>
+                            <div class="lg:mt-0 lg:flex-shrink-0">
+                                <div class="mt-12 inline-flex rounded-md shadow">
+                                    <a href="{{route('event.new')}}"
+                                       class="py-2 px-12 bg-secondary rounded-lg">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="mt-2 inline-flex rounded-md shadow">
+                                    <a href="{{route('events')}}"
+                                       class="py-2 px-12 bg-secondary rounded-lg">
+                                        Browse Events <i class="uil uil-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <img src="{{asset('images/slider/slider-updated-3.png')}}"
-                         class="object-contain absolute h-full max-w-1/2 hidden lg:block right-0 top-0 mr-10 z-20"/>
                 </div>
             </div>
-        </div>
+            <!-- End Swiper 2 -->
+
+            <!-- Swiper 3 -->
+            <div class="swiper-slide relative bg-no-repeat bg-cover bg-center h-screen w-full w-full"
+                 style="background-image:url({{asset('images/slider/slide-3-lg.png')}})">
+                <div class="flex w-full justify-center absolute bottom-20">
+                    <div class="text-white lime-slider mx-5">
+                        <div class="text-start z-9999">
+                            <h4 class="text-3xl text-white dark:text-white mb-2">
+                                Lack of connectedness can worsen mental and physical conditions.
+                            </h4>
+                            <p>
+                                While also increasing the risk of death.
+                            </p>
+                            <div class="lg:mt-0 lg:flex-shrink-0">
+                                <div class="mt-12 inline-flex rounded-md shadow">
+                                    <a href="{{route('event.new')}}"
+                                       class="py-2 px-12 bg-secondary rounded-lg">
+                                        Register Event <i class="uil uil-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="mt-2 inline-flex rounded-md shadow">
+                                    <a href="{{route('events')}}"
+                                       class="py-2 px-12 bg-secondary rounded-lg">
+                                        Browse Events <i class="uil uil-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Swiper 3 -->
+
+        </div><!-- End Swiper Wrapper -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-    </div>
-    <!-- Header section ends here-->
+    </div><!-- End mySwiper -->
+    <!-- End Swiper -->
 
     <section class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
 

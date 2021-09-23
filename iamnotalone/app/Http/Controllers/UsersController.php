@@ -254,7 +254,7 @@ class UsersController extends Controller
         
         $eventId = $request->session()->pull('eventId');
         if ($this->eventController->updateEventDate($eventId, $request->start_date, $request->start_time, $request->end_date, $request->end_time, $request->frequency)) {
-            notify()->success("Event Created", "Success");
+            notify()->success("Your event will be reviewed in 48 hours. You will be notified if your event was approved.", "Success");
             return redirect()->route('event.created', ['id'=>$eventId]);
         } else {
             notify()->info("Something went wrong, please try again", "Error");

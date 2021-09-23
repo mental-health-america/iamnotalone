@@ -39,12 +39,12 @@
                                 <p class="text-xs "> <small>{{$message}}</small> </p>
                             @enderror
                         </div>
-                        <div class="py-2 text-left">
+                        <!-- <div class="py-2 text-left">
                             <input type="tel" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Phone Number" name="phone" value="{{old('phone', '')}}" required/>
                             @error('phone')
                                 <p class="text-xs "> <small>{{$message}}</small> </p>
                             @enderror
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="py-2 text-left">
@@ -54,12 +54,12 @@
                         @enderror
                     </div>
 
-                    <div class="py-2 text-left">
+                    <!-- <div class="py-2 text-left">
                         <input type="text" class="bg-white text-sm border-2 border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="State" id="state" name="state" value="{{old('state', '')}}" required autocomplete="off"/>
                         @error('state')
                             <p class="text-xs "> <small>{{$message}}</small> </p>
                         @enderror
-                    </div>
+                    </div> -->
             
                     <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
                         <div class="flex flex-wrap items-stretch border-2   border-gray-100 w-full relative h-15 bg-white  rounded-lg  items-center rounded mb-4">

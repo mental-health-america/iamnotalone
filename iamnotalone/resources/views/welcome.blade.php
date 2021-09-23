@@ -53,7 +53,7 @@
                     <div class="text-white lime-slider mx-5">
                         <div class="text-start z-9999">
                             <h4 class="text-3xl text-white dark:text-white mb-2">
-                                You don't have to be alone anymore
+                                You don’t have to be alone anymore.
                             </h4>
                             <p>
                                 Meet and Connect with new people and begin the process of building meaningful friendship
@@ -62,7 +62,7 @@
                                 <div class="mt-12 inline-flex rounded-md shadow">
                                     <a href="{{route('event.new')}}"
                                        class="py-2 px-12 bg-secondary rounded-lg">
-                                        Register Event <i class="uil uil-arrow-right"></i>
+                                        Register your event <i class="uil uil-arrow-right"></i>
                                     </a>
                                 </div>
                                 <div class="mt-2 inline-flex rounded-md shadow">
@@ -85,16 +85,16 @@
                     <div class="text-white lime-slider mx-5">
                         <div class="text-start z-9999">
                             <h4 class="text-3xl text-white dark:text-white mb-2">
-                                Many Americans struggle with loneliness and Isolation
+                                3 in 5 Americans feel lonely.
                             </h4>
                             <p>
-                                I am not alone
+                                Lack of connectedness can worsen mental and physical conditions.
                             </p>
                             <div class="lg:mt-0 lg:flex-shrink-0">
                                 <div class="mt-12 inline-flex rounded-md shadow">
                                     <a href="{{route('event.new')}}"
                                        class="py-2 px-12 bg-secondary rounded-lg">
-                                        Register Event <i class="uil uil-arrow-right"></i>
+                                        Register your event <i class="uil uil-arrow-right"></i>
                                     </a>
                                 </div>
                                 <div class="mt-2 inline-flex rounded-md shadow">
@@ -117,16 +117,16 @@
                     <div class="text-white lime-slider mx-5">
                         <div class="text-start z-9999">
                             <h4 class="text-3xl text-white dark:text-white mb-2">
-                                Lack of connectedness can worsen mental and physical conditions.
+                                Loneliness is bad for your health.
                             </h4>
                             <p>
-                                While also increasing the risk of death.
+                                It can cause the same amount of damage to your lifespan as smoking 15 cigarettes a day.
                             </p>
                             <div class="lg:mt-0 lg:flex-shrink-0">
                                 <div class="mt-12 inline-flex rounded-md shadow">
                                     <a href="{{route('event.new')}}"
                                        class="py-2 px-12 bg-secondary rounded-lg">
-                                        Register Event <i class="uil uil-arrow-right"></i>
+                                        Register your event <i class="uil uil-arrow-right"></i>
                                     </a>
                                 </div>
                                 <div class="mt-2 inline-flex rounded-md shadow">

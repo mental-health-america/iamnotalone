@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MHA’s I Am Not Alone</title>
-    <meta property="og:image" content="http://iamnotalone.mhanational.org/images/og-social.png" />
+    <meta property="og:image" content="https://iamnotalone.mhanational.org/images/og-social.png" />
     @notifyCss
     <link rel="shortcut icon" href="{{asset('images/logo.png')}}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto&display=swap" rel="stylesheet">

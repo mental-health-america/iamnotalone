@@ -56,7 +56,7 @@
                                 You don’t have to be alone anymore.
                             </h4>
                             <p>
-                                Meet and Connect with new people and begin the process of building meaningful friendship
+                                Meet and connect with new people. Begin the process of building meaningful friendships.
                             </p>
                             <div class="lg:mt-0 lg:flex-shrink-0">
                                 <div class="mt-12 inline-flex rounded-md shadow">

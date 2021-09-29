@@ -36,11 +36,11 @@
                             </label>
                             <div class="py-2 text-left registration_link">
                                 <label for="registration_link" class="uppercase block text-xs mb-2">Registration Link</label>
-                                <input type="url" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 registration_link" placeholder="Registration link" id="registration_link" name="registration_link"/>
+                                <input type="text" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 registration_link" placeholder="Registration link" id="registration_link" name="registration_link"/>
                             </div>
                             <div class="py-2 text-left event_link">
                                 <label for="event_link" class="uppercase block text-xs mb-2">Event Link</label>
-                                <input type="url" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 event_link" placeholder="Event link" id="event_link" name="link"/>
+                                <input type="text" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 event_link" placeholder="Event link" id="event_link" name="link"/>
                             </div>
                         </div>
                         <!--<div class="py-2 text-left">

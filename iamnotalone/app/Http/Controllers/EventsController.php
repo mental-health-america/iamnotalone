@@ -41,11 +41,12 @@ class EventsController extends Controller
      * @param string $link event link
      * @param string $platform 
      */
-    public function updateOnlineEvent($id, $link, $platform)
+    public function updateOnlineEvent($id, $link, $platform, $reg_link)
     {
         $event = Events::find($id);
         if ($event) {
             $event->link = $link;
+            $event->registration_link = $reg_link;
             $event->platform = $platform;
             $event->online = 1;
             return $event->save();

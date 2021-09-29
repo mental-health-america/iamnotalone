@@ -169,7 +169,7 @@ class UsersController extends Controller
         $request->validate([
             'registration_link'=>'required_without:link',
             'link'=>'required_without:registration_link',
-            'platform'=>'required'
+     //       'platform'=>'required'
         ]);
         $eventId = Session('eventId');
         if ($this->eventController->updateOnlineEvent($eventId, $request->link, $request->platform, $request->registration_link)) {

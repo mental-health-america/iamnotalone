@@ -135,7 +135,7 @@
             
         </div>
         <div class="sponsor-text" style="--tw-text-opacity: 1;color: rgba(255,255,255,var(--tw-text-opacity)); padding: 0px 69px 14px; text-align: center;">
-            <p>MHA’s I Am Not Alone is made possible through the philanthropic contributions from Janseen Pharmaceuticals. For more information about this program, please contact Patrick Hendry, Vice President of Peer Advocacy, Supports, and Services, at phendry@mhanational.org.</p>
+            <p>MHA’s I Am Not Alone is made possible through the philanthropic contributions from Janssen Pharmaceuticals. For more information about this program, please contact Patrick Hendry, Vice President of Peer Advocacy, Supports, and Services, at phendry@mhanational.org.</p>
         </div>
     </div>
 

@@ -32,7 +32,7 @@
         <!-- Links group 1-->
         <div class="md:text-center md:w-2/12 mb-6 pr-6">
             <!-- Links -->
-            <a href="#" rel="noopener nofollow" class="mb-3 block text-white  text-sm md:text-xl font-medium">
+            <a href="<?php echo e(route('about')); ?>" rel="noopener nofollow" class="mb-3 block text-white  text-sm md:text-xl font-medium">
                 About
             </a>
             <a href="https://www.mhanational.org/about" rel="noopener nofollow" class="my-2 block text-white hover:text-gray-400 text-xs sm:text-sm font-light duration-700">
@@ -135,7 +135,7 @@
             
         </div>
         <div class="sponsor-text" style="--tw-text-opacity: 1;color: rgba(255,255,255,var(--tw-text-opacity)); padding: 0px 69px 14px; text-align: center;">
-            <p>MHA’s I Am Not Alone is made possible through the philanthropic contributions from Janseen Pharmaceuticals. For more information about this program, please contact Patrick Hendry, Vice President of Peer Advocacy, Supports, and Services, at phendry@mhanational.org.</p>
+            <p>MHA’s I Am Not Alone is made possible through the philanthropic contributions from Janssen Pharmaceuticals. For more information about this program, please contact Patrick Hendry, Vice President of Peer Advocacy, Supports, and Services, at phendry@mhanational.org.</p>
         </div>
     </div>
 

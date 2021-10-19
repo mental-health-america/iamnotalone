@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iamnotalone by MHA</title>
+    <title>MHA’s I Am Not Alone</title>
+    <meta property="og:image" content="https://iamnotalone.mhanational.org/images/og-social.png" />
     <?php echo notifyCss(); ?>
     <link rel="shortcut icon" href="<?php echo e(asset('images/logo.png')); ?>" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto&display=swap" rel="stylesheet">
@@ -23,8 +24,8 @@
         }
     </style>
 </head>
-<body>    
-    <?php echo $__env->make('partials.topnav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>;
+<body>
+    <?php echo $__env->make('partials.topnav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('partials.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->yieldContent('content'); ?>
     <?php echo $__env->make('partials.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -46,4 +47,5 @@
     <script src="<?php echo e(asset('js/toggle.js')); ?>"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
     <?php echo $__env->yieldContent('js'); ?>
-</html><?php /**PATH /home/iamnotalone/public_html/iamnotalone/resources/views/layout/master.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH /home/iamnotalone/public_html/iamnotalone/resources/views/layout/master.blade.php ENDPATH**/ ?>

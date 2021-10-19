@@ -405,4 +405,23 @@ class AdminController extends Controller
         return back();
     }
     
+    public function updateEvent($id, Request $request){
+        $fileName= "";
+        if($request->file('banner')){
+            $path = 'event/banner/';
+            $extension = $request->file('banner')->getClientOriginalExtension();
+            $fileName = 'banner-'.time().'.'.$extension;
+            if ($this->fileHandler->uploadFile($path, $fileName, $request->file('banner'))) {
+                $fileName = 'storage/' . $path . $fileName;
+            }
+        }
+        $eventId = $this->eventsController->updateEventTraining($id, $request->all(), $fileName);
+        if ($eventId) {
+            notify()->success('Event Updated', 'Success');
+            return redirect()->route('admin.events.approved');
+        } else {
+            notify()->info('Something went wrong, please try again', 'Error');
+        }
+        return back();
+    }
 }

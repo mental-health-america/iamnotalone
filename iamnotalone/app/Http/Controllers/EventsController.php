@@ -46,9 +46,9 @@ class EventsController extends Controller
         $event = Events::find($id);
         if ($event) {
             $event->link = $link;
-            $event->registration_link = $reg_link;
             $event->platform = $platform;
             $event->online = 1;
+            $event->registration_link = $reg_link;
             return $event->save();
         } else {
             return false;
@@ -351,4 +351,48 @@ class EventsController extends Controller
         return Events::where('training', 1)->first();
     }
 
+    public function updateEventTraining($id, $data, $filename){
+        $event = Events::find($id);
+        $event->name = $data['title'];
+        $event->description = $data['description'];
+        if ($filename) {
+            $event->banner = $filename;
+        }
+        if (isset($data['registration_link']) && $data['registration_link']) {
+            $event->registration_link = $data['registration_link'];
+            $event->link = NULL;
+        }
+        if (isset($data['link']) && ($data['link'])) {
+            $event->link = $data['link'];
+            $event->registration_link = NULL;
+        }
+        if (isset($data['hybrid_event_link']) && ($data['hybrid_event_link'])) {
+            $event->link = $data['hybrid_event_link'];
+            $event->registration_link = NULL;
+        }
+
+        if ($data['venue'] || $data['hybrid_venue']) {
+            $event->venue = $data['venue'] ?: $data['hybrid_venue'];
+        }
+        if ($data['address1'] || $data['hybrid_address1']) {
+            $event->address1 = $data['address1'] ?: $data['hybrid_address1'];
+        }
+        if ($data['address2'] || $data['hybrid_address2']) {
+            $event->address2 = $data['address2'] ?: $data['hybrid_address2'];
+        }
+        if ($data['city'] || $data['hybrid_city']) {
+            $event->city = $data['city'] ?: $data['hybrid_city'];
+        }
+        if ($data['state'] || $data['hybrid_state']) {
+            $event->state = $data['state'] ?: $data['hybrid_state'];
+        }
+        if ($data['platform']) {
+            $event->platform = $data['platform'];
+        }
+        $event->start_date = $data['start_date'];
+        $event->start_time = $data['start_time'];
+        $event->end_date = $data['end_date'];
+        $event->end_time = $data['end_time'];
+        return $event->save();
+    }
 }

@@ -7,7 +7,7 @@
         <div class="w-full mx-auto">
             <div class="flex flex-col">
                 <div class="">
-                    <img class="object-cover h-auto md:h-96 w-full rounded-xl" alt="Event title" src="{{asset('images/events/event5.png')}}">
+                    <img class="object-cover h-auto md:h-96 w-full rounded-xl" alt="Event title" src="{{asset($event->banner)}}">
                 </div>
             </div>
             <div class="md:w-3/4 px-4 my-8"> 
@@ -30,7 +30,12 @@
                         <p class="text-sm text-gray-600 font-semibold mb-4"> <span class="uil uil-map-marker text-lg"></span> {{$event->venue.', '.$event->address1.'. '. $event->city.', '.$event->state}} </p>
                     @endif
                     @if($event->online)
-                        <p class="text-sm text-gray-600 mb-4 font-semibold"> {{$event->platform}} <span class="uil uil-link text-lg"></span> <a href="{{$event->link}}">{{$event->link}}</a> </p>
+                        <p class="text-sm text-gray-600 mb-4 font-semibold"> {{$event->platform}} <span class="uil uil-link text-lg"></span> @if($event->link)
+                    <a href="{{$event->link}}">{{$event->link}}</a> 
+                    @endif
+                    @if($event->registration_link)
+                    <a href="{{$event->registration_link}}">{{$event->registration_link}}</a>
+                    @endif </p>
                     @endif
                     <p class="text-sm text-yellow-500 font-semibold"> <span class="uil uil-clock text-lg text-black"></span> {{\Carbon\Carbon::parse($event->start_date)->format('l')}}, {{date('h:i:s a', strtotime($event->start_time))}} PDT</p>
                     <p class="text-gray-600 mt-4">Disability Accomodations</p>

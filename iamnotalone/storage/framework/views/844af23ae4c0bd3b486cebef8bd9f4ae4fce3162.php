@@ -35,14 +35,14 @@
                             </label>
                             <div class="py-2 text-left registration_link">
                                 <label for="registration_link" class="uppercase block text-xs mb-2">Registration Link</label>
-                                <input type="url" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 registration_link" placeholder="Registration link" id="registration_link" name="registration_link"/>
+                                <input type="text" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 registration_link" placeholder="Registration link" id="registration_link" name="registration_link"/>
                             </div>
                             <div class="py-2 text-left event_link">
                                 <label for="event_link" class="uppercase block text-xs mb-2">Event Link</label>
-                                <input type="url" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 event_link" placeholder="Event link" id="event_link" name="link"/>
+                                <input type="text" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 event_link" placeholder="Event link" id="event_link" name="link"/>
                             </div>
                         </div>
-                        <div class="py-2 text-left">
+                        <!--<div class="py-2 text-left">
                             <label for="platform" class="uppercase block text-xs mb-2">Platform</label>
                             <input type="text" list="platforms" class="border-2 text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700 " placeholder="Platform" id="platform" name="platform" required/>
                             <datalist id="platforms">
@@ -51,7 +51,7 @@
                                 <option value="Ring Central">Ring Central</option>
                                 <option value="Microsoft Teams">Microsoft Teams</option>
                             </datalist>
-                        </div>
+                        </div>-->
                         
                         <div class="py-2 mt-6">
                             <button class="uppercase text-center border border-gray-100 focus:outline-none bg-primary text-white font-semibold tracking-wider block w-3/4 md:w-1/2 m-auto py-3 rounded-lg focus:border-gray-700 hover:bg-purple-700">

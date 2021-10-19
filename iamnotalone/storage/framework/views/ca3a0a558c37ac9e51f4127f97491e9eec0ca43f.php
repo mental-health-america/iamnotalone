@@ -1,5 +1,5 @@
 <div class="bg-primary text-white px-4 sm:px-8 py-4 text-xs sm:text-sm">
-    <a href="https://screening.mhanational.org/screening-tools/?ref=NotAlone">Take our Screening</a>
+    <a href="https://screening.mhanational.org/screening-tools/?ref=NotAlone">Take a Mental Health Test</a>
     <span class="float-right uppercase">
         <?php if(auth()->guard()->check()): ?>
             <div @click.away="open = false" class="relative" x-data="{ open: false }">

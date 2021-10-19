@@ -35,11 +35,12 @@
                                     <option value="Training">Training</label>
                                     <option value="Concert">Concert</label>
                                     <option value="Activities">Activity</label>
+                                    <option value="Other">Other</label>
                                 </select>
                             </div>
 
                             <div class="py-2 text-left">
-                                <label for="event_name" class="block text-xs mb-2">Activity Banner (PNG, JPG; 750 * 250 px)</label>
+                                <label for="event_name" class="block text-xs mb-2">Activity Flyer (PNG, JPG; 750 * 250 px) <b>MUST HAVE THE RECOMMENDED SPECIFICATIONS</b></label>
                                 <input type="file" class="border text-sm border-gray-100 focus:outline-none block w-full p-4 rounded-lg focus:border-gray-700" accept="image/*" name="banner" placeholder="Upload Image" value="<?php echo e(old('banner')); ?>"/>
                             </div>
                         </div>
@@ -60,7 +61,7 @@
                         </div>
 
                         <div class="py-4 hidden text-left" id="adiv" style="display: none">
-                            <label class="uppercase block text-xs mb-2">Type of Accomodation(You can select multiple options)</label> 
+                            <label class="uppercase block text-xs mb-2">Types of Accommodation (You can select multiple options)</label> 
                             <div class="pl-6">
                                 <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="ASL Interpreter"> ASL Interpreter</label>
                                 <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="Communication Access in Real-Time (CART services)"> Communication Access in Real-Time (CART services)</label>
@@ -104,12 +105,12 @@
     <script src="<?php echo e(asset('js/multiselect.min.js')); ?>"></script>
     <script>
         document.multiselect('#aoptions')
-		.setCheckBoxClick("checkboxAll", function(target, args) {
-			console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
-		})
-		.setCheckBoxClick("1", function(target, args) {
-			console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
-		});
+        .setCheckBoxClick("checkboxAll", function(target, args) {
+            console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+        })
+        .setCheckBoxClick("1", function(target, args) {
+            console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+        });
     </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/iamnotalone/public_html/iamnotalone/resources/views/create_event.blade.php ENDPATH**/ ?>

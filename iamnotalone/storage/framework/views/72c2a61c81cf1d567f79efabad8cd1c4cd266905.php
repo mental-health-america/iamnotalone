@@ -27,7 +27,14 @@
                     <p class="text-sm text-gray-600 my-2 font-semibold"> <span class="uil uil-map-marker text-lg"></span> <?php echo e($event->venue.', '.$event->address1.'. '. $event->city.', '.$event->state); ?> </p>
                 <?php endif; ?>
                 <?php if($event->online): ?>
-                    <p class="text-sm text-gray-600 my-4 font-semibold"> <?php echo e($event->platform); ?> <span class="uil uil-link text-lg"></span> <a href="<?php echo e($event->link); ?>"><?php echo e($event->link); ?></a> </p>
+                    <p class="text-sm text-gray-600 my-4 font-semibold"> <?php echo e($event->platform); ?> <span class="uil uil-link text-lg"></span> 
+                    <?php if($event->link): ?>
+                    <a href="<?php echo e($event->link); ?>"><?php echo e($event->link); ?></a> 
+                    <?php endif; ?>
+                    <?php if($event->registration_link): ?>
+                    <a href="<?php echo e($event->registration_link); ?>"><?php echo e($event->registration_link); ?></a>
+                    <?php endif; ?>
+                    </p>
                 <?php endif; ?>
                
                 <p class="text-gray-600 mt-4 text-sm">Disability Accomodations</p>
@@ -46,7 +53,7 @@
                 <p class="text-sm text-yellow-500 my-4 font-semibold"> <span class="uil uil-clock text-lg text-black"></span> <?php echo e(\Carbon\Carbon::parse($event->start_date)->format('l')); ?>, <?php echo e(date('h:i:s a', strtotime($event->start_time))); ?> EST</p>
 
                 <p class="mt-12">
-                    <a href="<?php echo e(route('register')); ?>" id="register" class="py-3 px-12 bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                    <a href="#" id="register" class="py-3 px-12 bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                         Register <i class="uil uil-check"></i>
                     </a>
                 </p>

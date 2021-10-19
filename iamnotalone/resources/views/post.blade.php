@@ -50,6 +50,9 @@
                                 <span class="text-right text-indigo-800">
                                     <a href="#" class="">Report</a>
                                 </span>
+                                <span class="text-right text-indigo-800 px-1">
+                                    <a href="#" class="">{{date('m-d-Y H:i:s', strtotime($comment->created_at))}}</a>
+                                </span>
                             </p>
                         </div>
                     @endforeach

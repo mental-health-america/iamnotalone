@@ -160,7 +160,7 @@
                 </button>
                 @foreach ($categories as $category)
                     <button
-                        class="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white border border-r-0 text-xs border-indigo-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline"
+                        class="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white border border-r-0 text-xs border-indigo-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline capitalize"
                         data-filter=".{{$category->category}}">{{$category->category}}</button>
                 @endforeach
             </div>

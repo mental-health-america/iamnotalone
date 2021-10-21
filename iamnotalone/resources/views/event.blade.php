@@ -49,10 +49,10 @@
                     </ul>
                 @endif  
                
-                <p class="text-sm text-yellow-500 my-4 font-semibold"> <span class="uil uil-clock text-lg text-black"></span> {{\Carbon\Carbon::parse($event->start_date)->format('l')}}, {{date('h:i:s a', strtotime($event->start_time))}} EST</p>
+                <p class="text-sm text-yellow-500 my-4 font-semibold"> <span class="uil uil-clock text-lg text-black"></span> {{\Carbon\Carbon::parse($event->start_date)->format('l')}}, {{date('h:i:s a', strtotime($event->start_time))}} EST - {{\Carbon\Carbon::parse($event->end_date)->format('l')}}, {{date('h:i:s a', strtotime($event->end_time))}} EST</p>
 
                 <p class="mt-12">
-                    <a href="#" id="register" class="py-3 px-12 bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                    <a href="{{route('register')}}" id="register" class="py-3 px-12 bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                         Register <i class="uil uil-check"></i>
                     </a>
                 </p>

@@ -46,11 +46,10 @@ class ExtraController extends Controller
             'first_name'=>'required',
             'last_name'=>'required',
             'pronoun'=>'required',
-            'phone'=>'required|unique:users',
             'email'=>'required|unique:users',
-            'state'=>'required',
             'password'=>'required|confirmed|min:7'
         ]);
+        
         $response = $this->userController->
             new($request->first_name, $request->last_name, $request->pronoun, $request->email, $request->phone, $request->state, $request->password);
         if ($response) {

@@ -193,7 +193,7 @@
                                     <div class="text-sm text-gray-500">
                                         <p class="text-yellow-600">
                                             {{\Carbon\Carbon::parse($event->start_date)->format('l')}}
-                                            , {{date('h:i:s a', strtotime($event->start_time))}} EST
+                                            , {{date('h:i a', strtotime($event->start_time))}} EST
                                         </p>
                                     </div>
                                 </div>

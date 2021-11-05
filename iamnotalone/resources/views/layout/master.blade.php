@@ -25,6 +25,7 @@
     </style>
 </head>
 <body>
+    @include('analytics')
     @include('partials.topnav')
     @include('partials.header')
     @yield('content')

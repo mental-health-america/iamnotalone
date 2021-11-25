@@ -7,7 +7,7 @@
                     <h1 class="font-medium uppercase tracking-wider text-3xl mb-10 w-full text-center text-black">
                         Create your Event
                     </h1>
-                    <p class="text-sm sm:text-center">Help your attendees plan better by knowing when this event will be happening.</p>
+                    <p class="text-sm sm:text-center">Help your attendees plan better by knowing when this event will be happening. Please know that all events are displayed in <b>Eastern Time (EST)</b>. To find the EST time for your event, please use this <a href="https://www.worldtimebuddy.com/?pl=1&lid=5,8&h=5&hf=1" target="_blank">timezone converter</a>.</p>
                 </div>
 
                 <form class="" method="POST" action="{{route('event.date.set')}}">

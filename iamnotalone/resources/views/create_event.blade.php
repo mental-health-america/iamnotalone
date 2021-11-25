@@ -12,7 +12,7 @@
                         <h1 class="font-medium uppercase tracking-wider text-3xl mb-10 w-full text-center text-black">
                             Create your Activity
                         </h1>
-                        <p class="text-sm sm:text-center">Name your activity and tell activity-goers why they should come. Add details that highlight what makes it unique.</p>
+                        <p class="text-sm sm:text-center">Name your activity and tell activity-goers why they should come. Add details that highlight what makes it unique. <b>Events posted on our site must align with MHA’s commitment to anti-racism, non-discrimination, and mental wellness for all.</b></p>
                     </div>
 
                     <div class="">

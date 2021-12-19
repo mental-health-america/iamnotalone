@@ -158,14 +158,20 @@
                     class="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white border border-r-0 text-xs border-indigo-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline btn-active"
                     data-filter="*">All Events
                 </button>
+                
                 @foreach ($categories as $category)
+                
                     <button
                         class="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white border border-r-0 text-xs border-indigo-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline capitalize"
                         data-filter=".{{$category->category}}">{{$category->category}}</button>
                 @endforeach
             </div>
-
-            <div class="grid gap-6 mx-auto mt-12 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full" id="target">
+        
+            <div id="target">
+                <p class="py-6 Community description" style="font-weight:600" data-category="Community">Community - Here you will find a listing of community support groups including peer support groups, AA groups, and more.</p>
+                <p class="py-6 Activities description" style="font-weight:600" data-category="Activities">Activities - Here you will find a listing of community activities including cooking classes, karaoke meetings, virtual yoga classes, and more.</p>
+                <div class="grid gap-6 mx-auto mt-12 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
+                    
                 @foreach ($events as $event)
                     <div
                         class="flex flex-col overflow-hidden rounded-lg shadow-lg lg:col-span-1 mb-5 {{$event->category}}"
@@ -192,8 +198,7 @@
                                 <div class="flex items-center">
                                     <div class="text-sm text-gray-500">
                                         <p class="text-yellow-600">
-                                            {{\Carbon\Carbon::parse($event->start_date)->format('l')}}
-                                            , {{date('h:i a', strtotime($event->start_time))}} EST
+                                            {{\Carbon\Carbon::parse($event->start_date)->format('l')}}, {{date('h:i a', strtotime($event->start_time))}} EST - {{\Carbon\Carbon::parse($event->end_date)->format('l')}}, {{date('h:i a', strtotime($event->end_time))}} EST
                                         </p>
                                     </div>
                                 </div>
@@ -201,6 +206,7 @@
                         </div>
                     </div>
                 @endforeach
+                </div>
             </div>
         @endif
     </section>

@@ -72,14 +72,17 @@
                                 <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="Assistive Listening Device"> Assistive Listening Device</label>
                                 <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="An Assistant will accompany me"> An Assistant will accompany me</label>
                                 <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="Closed-captioned videos"> Closed-captioned videos</label>
-                                <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="Translator"> Translator<option>
+                                <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="Translator"> Translator</label>
+                                <label class="block align-middle text-xs uppercase"><input type="checkbox" name="accomodation[]" value="Other"> Other<option>
                             </div>   
-                                
+                            <div class="alert alert-danger" id="acc_option" style="color:red; display:none">
+                                  <p>*Please check at least one accomodation.</p>
+                                </div>
                            
                         </div>
 
                         <div class="py-2 mt-6">
-                            <button type="submit" class="uppercase text-center border border-gray-100 focus:outline-none bg-primary text-white font-semibold tracking-wider block w-3/4 md:w-1/2 m-auto py-3 rounded-lg focus:border-gray-700 hover:bg-purple-700">
+                            <button type="submit" class="uppercase text-center border border-gray-100 focus:outline-none bg-primary text-white font-semibold tracking-wider block w-3/4 md:w-1/2 m-auto py-3 rounded-lg focus:border-gray-700 hover:bg-purple-700" id="next_page">
                                 Next
                             </button>
                         </div>
@@ -94,6 +97,41 @@
         document.getElementById("events").classList.add('link-active');
     </script>
     <script>
+        $("input[name='accomodation[]']").on('change', function(){
+            $("#acc_option").hide();
+        });
+        $(document).ready(function () {
+            $("#acc_option").hide();
+            $('#next_page').click(function() {
+                $("#acc_option").hide();
+                var accomodation = $("#accomodation:checked").length;
+                if(accomodation !== null || accomodation > 0){
+                    var checked = $("input[name='accomodation[]']:checked").length;
+                    if(!checked) {
+                        $("#acc_option").show();
+                        return false;
+                     }else{
+                         $("#acc_option").hide();
+                     }
+                }
+            });
+        });
+        $(".moratageBlockView").click(function(){
+            $(".moratageBlockView").removeClass("active");
+            $(this).addClass("active");
+            var moratageBlock = $(this).attr("data-moratageBlock");
+            $("#moratageBlock").val(moratageBlock);
+            console.log('typeof testObject: ' + typeof testObject);
+            console.log('testObject properties:');
+            for (var prop in testObject) {
+                console.log('  ' + prop + ': ' + testObject[prop]);
+            }
+            localStorage.setItem('testObject', testObject);
+            var retrievedObject = localStorage.getItem('testObject');
+
+            console.log('typeof retrievedObject: ' + typeof retrievedObject);
+            console.log('Value of retrievedObject: ' + retrievedObject);
+        });
         $("#accomodation").click(function () {
             $("#adiv").toggle(1000);
             if ($(this).is(':checked')) {

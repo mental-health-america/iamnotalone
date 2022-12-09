@@ -1,10 +1,15 @@
 @extends('layout.master')
 @section('css')
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 @endsection
 @section('content')
+    <style>
+        .Conference .register-btn {
+            display: none !important;
+        }
+    </style>
     <div class="container">
-        <div class="md:w-4/6 mx-auto">
+        <div class="{{$event->category}} md:w-4/6 mx-auto">
             <div class="flex flex-col">
                 <div class="">
                     <img class="object-cover h-auto md:h-96 w-full rounded-xl" alt="Event title" src="{{asset($event->banner)}}">
@@ -26,16 +31,16 @@
                     <p class="text-sm text-gray-600 my-2 font-semibold"> <span class="uil uil-map-marker text-lg"></span> {{$event->venue.', '.$event->address1.'. '. $event->city.', '.$event->state}} </p>
                 @endif
                 @if($event->online)
-                    <p class="text-sm text-gray-600 my-4 font-semibold"> {{$event->platform}} <span class="uil uil-link text-lg"></span> 
+                    <p class="text-sm text-gray-600 my-4 font-semibold"> {{$event->platform}} <span class="uil uil-link text-lg"></span>
                     @if($event->link)
-                    <a href="{{$event->link}}">{{$event->link}}</a> 
+                    <a href="{{$event->link}}">{{$event->link}}</a>
                     @endif
                     @if($event->registration_link)
                     <a href="{{$event->registration_link}}">{{$event->registration_link}}</a>
                     @endif
                     </p>
                 @endif
-               
+
                 <p class="text-gray-600 mt-4 text-sm">Disability Accomodations</p>
                 @if (count($accomodations))
                     <ul class="pl-8 list-disc inline-block text-sm">
@@ -47,15 +52,15 @@
                     <ul class="pl-8 list-disc inline-block text-sm">
                         <li>None</li>
                     </ul>
-                @endif  
-               
+                @endif
                 <p class="text-sm text-yellow-500 my-4 font-semibold"> <span class="uil uil-clock text-lg text-black"></span> {{\Carbon\Carbon::parse($event->start_date)->format('l')}}, {{date('h:i a', strtotime($event->start_time))}} EST - {{\Carbon\Carbon::parse($event->end_date)->format('l')}}, {{date('h:i a', strtotime($event->end_time))}} EST</p>
-
-                <!-- <p class="mt-12">
+                <div class="register-btn">
+                <p class="mt-12">
                     <a href="#" id="register" class="py-3 px-12 bg-primary hover:bg-indigo-700 focus:ring-indigo-500 flex-nowrap focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
                         Register <i class="uil uil-check"></i>
                     </a>
-                </p> -->
+                </p>
+                </div>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+<section class="categories px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="text-left">
         <h2 class="text-xl font-bold text-indigo-400 uppercase"></h2>
     </div>
@@ -16,7 +16,7 @@
                 <button class="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white border border-r-0 text-xs border-indigo-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline" data-filter=".{{$category->category}}">{{$category->category}}</button>
             @endforeach
         </div>
-        
+
         <div class="grid gap-6 mx-auto mt-12 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full" id="target">
             @foreach ($events as $event)
                 <div class="flex flex-col overflow-hidden rounded-lg shadow-lg lg:col-span-1 mb-5 {{$event->category}}" data-category="{{$event->category}}">
@@ -34,7 +34,7 @@
                                 </h5>
                             </a>
                             <p class="mt-3 text-sm text-gray-600">
-                                {{substr($event->description, 0, 100)}}... 
+                                {{substr($event->description, 0, 100)}}...
                             </p>
                         </div>
 

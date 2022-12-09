@@ -40,6 +40,10 @@
             color: #fff;
         }
 
+        .categories button:nth-child(3)  {
+            display: none;
+        }
+
     </style>
 
     <!-- Swiper -->
@@ -148,7 +152,7 @@
     </div><!-- End mySwiper -->
     <!-- End Swiper -->
 
-    <section class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <section class="categories px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
 
         @if (!count($events))
             <p class="text-lg mt-4 text-gray-600"> There are no registered events at the moment.</p>
@@ -158,20 +162,20 @@
                     class="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white border border-r-0 text-xs border-indigo-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline btn-active"
                     data-filter="*">All Events
                 </button>
-                
+
                 @foreach ($categories as $category)
-                
+
                     <button
                         class="bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white border border-r-0 text-xs border-indigo-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline capitalize"
                         data-filter=".{{$category->category}}">{{$category->category}}</button>
                 @endforeach
             </div>
-        
+
             <div id="target">
                 <p class="py-6 Community description" style="font-weight:600" data-category="Community">Community - Here you will find a listing of community support groups including peer support groups, AA groups, and more.</p>
                 <p class="py-6 Activities description" style="font-weight:600" data-category="Activities">Activities - Here you will find a listing of community activities including cooking classes, karaoke meetings, virtual yoga classes, and more.</p>
                 <div class="grid gap-6 mx-auto mt-12 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-full">
-                    
+
                 @foreach ($events as $event)
                     <div
                         class="flex flex-col overflow-hidden rounded-lg shadow-lg lg:col-span-1 mb-5 {{$event->category}}"
